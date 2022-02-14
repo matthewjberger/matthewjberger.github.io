@@ -1,10 +1,7 @@
 ---
 title: Integrating Python, Flask, Electron, and React
 header:
-  image: "/images/mountains.jpg"
-categories:
-  - Electron
-  - React
+  image: "/images/roses.jpg"
 tags:
   - Electron
   - vscode
