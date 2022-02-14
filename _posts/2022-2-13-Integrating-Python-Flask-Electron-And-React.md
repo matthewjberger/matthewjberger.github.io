@@ -333,8 +333,8 @@ To easily start our backend, frontend, and electron shell, add the following lin
 ```json
 "scripts": {
   ...
-  "start": "nx run-many --target=serve --projects=myapp-web,myapp-desktop,backend --parallel"
+  "start": "nx run-many --target=serve --projects=myapp-web,myapp-desktop,backend"
 }
 ```
 
-Finally, we can run `yarn start` to serve all three of our projects! You should see the electron shell appear, running our web application.
+Finally, we can run `yarn start` to serve all three of our projects in order! You should see the electron shell appear, running our web application.
