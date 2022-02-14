@@ -232,7 +232,7 @@ Then add the following code to the `package.json`.
 
 #### Adding the source
 
-To add the source for our electron app we will need two files, `index.html` and `main.js`.
+Let's add the source for our electron app.
 
 ```bash
 code apps/myapp-desktop/src/main.js
@@ -260,33 +260,6 @@ app.whenReady().then(() => {
   win.maximize();
   win.show();
 });
-```
-
-Now to serve the `main.js`, we'll add create an `index.html`.
-
-```bash
-code apps/myapp-desktop/src/index.html
-```
-
-Our `index.html` will contain a minimal web page that loads our electron script.
-
-```html
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
-  </body>
-</html>
 ```
 
 #### Integrating our Electron App with NX
