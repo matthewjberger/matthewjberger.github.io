@@ -2,7 +2,7 @@
 main:
   - title: "Portfolio"
     url: https://matthewjberger.xyz/portfolio
-  - title: "Learn Rust"
-    url: https://matthewjberger.xyz/learn-rust
+  - title: "Rust Crash Course"
+    url: https://matthewjberger.xyz/trust
   - title: "Let's Build a Game Engine"
     url: https://matthewjberger.xyz/phantom
