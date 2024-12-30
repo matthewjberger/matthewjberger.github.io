@@ -2,11 +2,11 @@
 
 My name is `Matthew Berger` 👋
 
-I am a staff software engineer at [Hyphen](https://usehyphen.com),
+I am a `Staff Software Engineer` at [Hyphen](https://usehyphen.com),
 currently using the `Rust` programming language  to build `food assembly robots`
  🥗
 
-My open-source work is available on [github](https://github.com/matthewjberger) 🙂
+My open-source work is available on [github](https://github.com/matthewjberger) and [linkedin](https://www.linkedin.com/in/matthewjberger/) 😁
 
 ![image](./images/image.jpg)
 
