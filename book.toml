@@ -3,7 +3,7 @@ authors = ["Matthew J. Berger"]
 language = "en"
 multilingual = false
 src = "src"
-title = "matthewjberger.github.io"
+title = ""
 
 [rust]
 edition = "2024"
