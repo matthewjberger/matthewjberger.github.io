@@ -16,11 +16,12 @@ pub fn Experience() -> impl IntoView {
             company: "Hyphen Robotics",
             period: "Sep 2022 - Present",
             achievements: vec![
-                "Founded food assembly robotics controls suite as first engineer, driving technical pivot from PLC to Rust architecture and achieving complete product delivery in 22 months securing $10M+ investment from Chipotle and Cava",
+                "Founded food assembly robotics controls suite as first engineer, driving technical pivot from PLC to Rust architecture",
+                "Achieved complete product delivery in 22 months, securing $10M+ investment from Chipotle and Cava",
                 "Engineered full technology stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system and cloud infrastructure, including custom Yocto Linux distribution",
-                "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, capable of handling 5M+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
+                "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, capable of handling 1M+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
                 "Transformed team of web developers into proficient Rust systems programmers through hands-on mentorship, establishing architectural patterns, and pair programming",
-                "Designed deterministic configuration system enabling fleet scaling from single prototype to thousands of machines across multiple enterprise customers",
+                "Designed deterministic layered configuration system enabling unlimited fleet scaling",
                 "Created Hyphen Explorer tool achieving 100% adoption across all software engineers, ops technicians, and culinary operators for real-time IPC visualization, debugging, and system control",
                 "Published open-source Rust crates (enum2contract, enum2egui, enum2str, enum2pos, enum2repr) extending language capabilities for robotics",
             ],
@@ -32,8 +33,8 @@ pub fn Experience() -> impl IntoView {
             achievements: vec![
                 "Hired to extend initial PLC-based system, identified scaling limitations that would prevent growth beyond prototype stage",
                 "Led complete architectural pivot to embedded Rust, convincing leadership to abandon PLC approach for scalable alternative",
-                "Prototyped new architecture with RP2040 firmware using Embassy-rs, proving Rust could meet real-time robotics requirements",
-                "Built initial AWS cloud infrastructure with Pulumi while transitioning company to new technical direction",
+                "Pioneered RP2040 firmware with Embassy-rs, creating first Rust TMC5160 motor and AS5048A encoder drivers proving Rust could meet real-time control loop requirements",
+                "Built initial AWS cloud infrastructure with Pulumi infrastructure and greengrass IoT",
                 "Established foundation for Gen2 platform that would become company's core product and competitive advantage",
             ],
         },
@@ -74,14 +75,6 @@ pub fn Experience() -> impl IntoView {
                 "Decreased time spent quality testing robots by more than a week per robot by automating the process of gravimetric analysis",
                 "Saved developers hours of time per day on common tasks by creating a suite of in-house tools",
                 "Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through collaboration with third-party device manufacturers",
-            ],
-        },
-        Job {
-            title: "Database Developer",
-            company: "Washoe County",
-            period: "Oct 2014 - May 2016",
-            achievements: vec![
-                "Created a SQL database and ASP.NET web application for emergency response teams to quickly search local subject matter expert contact information",
             ],
         },
     ];
