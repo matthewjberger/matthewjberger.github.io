@@ -96,4 +96,4 @@ The project automatically deploys to GitHub Pages via GitHub Actions when pushin
 
 ## License
 
-MIT
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
