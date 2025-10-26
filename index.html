@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Tailwind CSS -->
+  <link rel="stylesheet" href="portfolio/styles-760d65ba3bb61278.css" integrity="sha384-DWpoE0FUkzjVm1e85lPq5dHHvKFVLzVzZx9IUm+0DMd7e5wvr7yZ5nLBx1j1BXky"/>
+
+  <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
+  <link rel="icon" href="portfolio/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
+
+  <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
+  
+<script type="module">
+import init, * as bindings from 'portfolio/portfolio-b91fbc2be0705b04.js';
+const wasm = await init({ module_or_path: 'portfolio/portfolio-b91fbc2be0705b04_bg.wasm' });
+
+
+window.wasmBindings = bindings;
+
+
+dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
+
+</script>
+<link rel="modulepreload" href="portfolio/portfolio-b91fbc2be0705b04.js" crossorigin="anonymous" integrity="sha384-rgTHTxUZ1oWW03EMrQ3iQgM+6z5eFQ1PaZWv4or/uuYSywiF3ZoyGLMpXLfMJQn+"><link rel="preload" href="portfolio/portfolio-b91fbc2be0705b04_bg.wasm" crossorigin="anonymous" integrity="sha384-MpAzqfpK4FrecwFZRhQD9TeRCTftn2h4cBH9WtIgjmrECaNFDk80JFCG3JeqKIXc" as="fetch" type="application/wasm"></head>
+
+<body></body>
+
+</html>
