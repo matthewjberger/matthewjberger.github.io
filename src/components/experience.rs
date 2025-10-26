@@ -16,15 +16,13 @@ pub fn Experience() -> impl IntoView {
             company: "Hyphen",
             period: "Sep 2022 - Present",
             achievements: vec![
-                "Founded robotics platform as first engineer, achieving complete product delivery in 22 months securing $10M+ investment from Chipotle and Cava",
-                "Built core async message broker handling 10K+ msgs/sec with zero message loss over 3 years and <1ms latency",
-                "Transformed 8-person web team into proficient Rust systems programmers through mentorship and documentation",
-                "Designed deterministic config system enabling scaling from 1 to 1000+ robots across enterprise deployments",
-                "Engineered full stack from bare-metal firmware (RP2040/Embassy) to cloud infrastructure on custom Yocto Linux",
-                "Created Hyphen Explorer used daily by all engineers and operators with 100% team adoption",
-                "Prevented 10+ critical failures through predictive architecture (connection pooling, event-driven telemetry, config diffing)",
-                "Published open-source Rust crates (enum2contract, enum2egui, enum2str) with 1000+ downloads",
-                "Established CI/CD pipeline reducing deployment time from hours to <20 minutes",
+                "Founded food assembly robotics controls suite as first engineer, driving technical pivot from PLC to Rust architecture and achieving complete product delivery in 22 months securing $10M+ investment from Chipotle and Cava",
+                "Engineered full technology stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system and cloud infrastructure, including custom Yocto Linux distribution",
+                "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, handling 10K+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
+                "Transformed team of web developers into proficient Rust systems programmers through hands-on mentorship, architectural documentation, and pair programming",
+                "Designed deterministic configuration system enabling fleet scaling from single prototype to thousands of machines across multiple enterprise customers",
+                "Created Hyphen Explorer tool achieving 100% adoption across all software engineers, ops technicians, and culinary operators for real-time IPC visualization, debugging, and system control",
+                "Published open-source Rust crates (enum2contract, enum2egui, enum2str, enum2pos, enum2repr) extending language capabilities for robotics",
             ],
         },
         Job {
@@ -32,9 +30,11 @@ pub fn Experience() -> impl IntoView {
             company: "Hyphen",
             period: "Jul 2021 - Sep 2022",
             achievements: vec![
-                "Led architectural pivot to embedded Rust, convincing C-suite to abandon $500K PLC investment",
-                "Prototyped RP2040 firmware with Embassy-rs, proving <10μs control loop feasibility",
-                "Built AWS infrastructure with Pulumi while transitioning company to new technical direction",
+                "Hired to extend initial PLC-based system, identified scaling limitations that would prevent growth beyond prototype stage",
+                "Led complete architectural pivot to embedded Rust, convincing leadership to abandon PLC approach for scalable alternative",
+                "Prototyped new architecture with RP2040 firmware using Embassy-rs, proving Rust could meet real-time robotics requirements",
+                "Built initial AWS cloud infrastructure with Pulumi while transitioning company to new technical direction",
+                "Established foundation for Gen2 platform that would become company's core product and competitive advantage",
             ],
         },
         Job {
@@ -42,8 +42,8 @@ pub fn Experience() -> impl IntoView {
             company: "Sierra Nevada Corporation",
             period: "May 2020 - Jul 2021",
             achievements: vec![
-                "Developed aerospace imaging software processing 5GB/sec pixel data during flight operations",
-                "Built Rust simulator for unavailable hardware, saving 3 months on project timeline",
+                "Developed robust aerospace imaging software capable of collecting and orthorectifying gigabytes of pixel data per second during a flight",
+                "Built asynchronous Rust simulator for unavailable flight hardware, saving months on project timeline",
             ],
         },
         Job {
@@ -51,7 +51,7 @@ pub fn Experience() -> impl IntoView {
             company: "Scientific Games",
             period: "Jul 2019 - May 2020",
             achievements: vec![
-                "Resolved performance defects improving frame rates by 40% in Unity-based casino platform",
+                "Improved game engine stability by resolving critical performance and rendering defects in Unity-based casino-gaming platform",
             ],
         },
         Job {
@@ -59,10 +59,29 @@ pub fn Experience() -> impl IntoView {
             company: "Hamilton Company",
             period: "Jan 2018 - Jul 2019",
             achievements: vec![
-                "Built safety-critical software for liquid-handling medical robots achieving FDA compliance",
-                "Reduced calibration development from 2 months to 2 weeks through reusable plugin framework",
-                "Decreased environment setup from 8 hours to 5 minutes with automated bootstrapper",
-                "Architected diagnostic application for largest OEM customer ($2M contract)",
+                "Designed and built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots",
+                "Reduced development time for new calibration routines from two months to less than two weeks by consolidating multiple applications into a single GUI and reusable-plugin framework",
+                "Decreased development environment setup from a day to a few clicks by creating a bootstrapper that installs dependencies and configures settings on a Windows virtual machine",
+                "Worked directly with Hamilton's largest OEM customer to architect an application that commands the firmware in their robots for rapidly diagnosing and resolving mechanical issues",
+                "Mentored new hires and interns on team processes and coding practices",
+            ],
+        },
+        Job {
+            title: "Software Engineering Intern",
+            company: "Hamilton Company",
+            period: "Oct 2014 - Dec 2017",
+            achievements: vec![
+                "Decreased time spent quality testing robots by more than a week per robot by automating the process of gravimetric analysis",
+                "Saved developers hours of time per day on common tasks by creating a suite of in-house tools",
+                "Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through collaboration with third-party device manufacturers",
+            ],
+        },
+        Job {
+            title: "Database Developer",
+            company: "Washoe County",
+            period: "Oct 2014 - May 2016",
+            achievements: vec![
+                "Created a SQL database and ASP.NET web application for emergency response teams to quickly search local subject matter expert contact information",
             ],
         },
     ];

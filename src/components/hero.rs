@@ -1,7 +1,12 @@
 use leptos::prelude::*;
+use leptos_pdf::PdfRenderer;
 
 #[component]
 pub fn Hero() -> impl IntoView {
+    let (show_pdf, set_show_pdf) = signal(false);
+    let (page, set_page) = signal(1_usize);
+    let (scale, set_scale) = signal(1.0_f32);
+
     view! {
         <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
             <div class="text-center px-4">
@@ -9,7 +14,7 @@ pub fn Hero() -> impl IntoView {
                     "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span>
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                    "Robotics Software Engineer"
+                    "Staff Software Engineer (Founding Engineer) at Hyphen"
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <a
@@ -22,16 +27,16 @@ pub fn Hero() -> impl IntoView {
                         </svg>
                         "Get In Touch"
                     </a>
-                    <a
-                        href="/Resume.pdf"
-                        download="Berger_Matthew_Resume.pdf"
+                    <button
+                        on:click=move |_| set_show_pdf.set(true)
                         class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
                     >
                         <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
                         </svg>
-                        "Download Resume"
-                    </a>
+                        "View Resume"
+                    </button>
                     <a
                         href="https://github.com/matthewjberger"
                         target="_blank"
@@ -44,6 +49,69 @@ pub fn Hero() -> impl IntoView {
                     </a>
                 </div>
             </div>
+
+            <Show when=move || show_pdf.get()>
+                <div
+                    class="fixed inset-0 bg-black bg-opacity-75 z-50 flex items-center justify-center p-4"
+                    on:click=move |_| set_show_pdf.set(false)
+                >
+                    <div
+                        class="bg-gray-800 rounded-lg w-full max-w-6xl flex flex-col"
+                        style:height="90vh"
+                        on:click=move |e| e.stop_propagation()
+                    >
+                        <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                            <h2 class="text-xl font-bold text-white">"Resume"</h2>
+                            <div class="flex items-center gap-4">
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        on:click=move |_| set_page.update(|p| *p = p.saturating_sub(1).max(1))
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                    >
+                                        "Previous"
+                                    </button>
+                                    <span class="text-gray-300">"Page " {move || page.get()}</span>
+                                    <button
+                                        on:click=move |_| set_page.update(|p| *p += 1)
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                    >
+                                        "Next"
+                                    </button>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <button
+                                        on:click=move |_| set_scale.update(|s| *s = (*s - 0.1_f32).max(0.5))
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                    >
+                                        "−"
+                                    </button>
+                                    <span class="text-gray-300">{move || format!("{:.0}%", scale.get() * 100.0)}</span>
+                                    <button
+                                        on:click=move |_| set_scale.update(|s| *s = (*s + 0.1_f32).min(3.0))
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                    >
+                                        "+"
+                                    </button>
+                                </div>
+                                <button
+                                    on:click=move |_| set_show_pdf.set(false)
+                                    class="text-gray-400 hover:text-gray-200 text-2xl font-bold"
+                                >
+                                    "×"
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-700 p-4" style:flex="1" style:width="100%" style:height="100%" style:overflow="auto">
+                            <PdfRenderer
+                                url="/Resume.pdf"
+                                page=page
+                                scale=scale
+                                text=true
+                            />
+                        </div>
+                    </div>
+                </div>
+            </Show>
         </section>
     }
 }

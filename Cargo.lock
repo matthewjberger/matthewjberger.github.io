@@ -798,6 +798,19 @@ dependencies = [
 ]
 
 [[package]]
+name = "leptos-pdf"
+version = "0.8.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "667ee66ba93b2ae3e322dc7a57cd2bfea459e4bfde495e8806420171f3744c21"
+dependencies = [
+ "leptos",
+ "log",
+ "uuid",
+ "wasm-bindgen",
+ "wasm-bindgen-futures",
+]
+
+[[package]]
 name = "leptos_config"
 version = "0.8.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1133,6 +1146,7 @@ dependencies = [
  "console_error_panic_hook",
  "console_log",
  "leptos",
+ "leptos-pdf",
  "leptos_meta",
  "leptos_router",
  "log",
