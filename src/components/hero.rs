@@ -66,14 +66,16 @@ pub fn Hero() -> impl IntoView {
                                 <div class="flex items-center gap-2">
                                     <button
                                         on:click=move |_| set_page.update(|p| *p = p.saturating_sub(1).max(1))
-                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled=move || page.get() <= 1
                                     >
                                         "Previous"
                                     </button>
                                     <span class="text-gray-300">"Page " {move || page.get()}</span>
                                     <button
                                         on:click=move |_| set_page.update(|p| *p += 1)
-                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled=move || page.get() >= 1
                                     >
                                         "Next"
                                     </button>
