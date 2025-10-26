@@ -3,7 +3,7 @@
 
 <head>
   <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="/styles-ab470bb6bad169db.css" integrity="sha384-dBedoZUVOdPk6hyssMmgER254KBtifHdj9aaRF3YKhcS9FkCJNNAHdddP2IAGbIS"/>
+  <link rel="stylesheet" href="/styles-bececc230060fdf7.css" integrity="sha384-FFwN7ehqZHAwXosafySjuHs8Lj4oH69v/I0/Yhh5Ag3GgXcaYtZHIzCfUP2tX7oB"/>
 
   <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
   <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
@@ -17,8 +17,8 @@
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   
 <script type="module">
-import init, * as bindings from '/portfolio-fbc082d56b4f130a.js';
-const wasm = await init({ module_or_path: '/portfolio-fbc082d56b4f130a_bg.wasm' });
+import init, * as bindings from '/portfolio-eff0836e7fcd306e.js';
+const wasm = await init({ module_or_path: '/portfolio-eff0836e7fcd306e_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -27,7 +27,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-<link rel="modulepreload" href="/portfolio-fbc082d56b4f130a.js" crossorigin="anonymous" integrity="sha384-kOHUD2LtT91rEJ2S6ifeT434airTO8suiGjD0lhF4mqfJMXhobOv88AZr9Ozbe37"><link rel="modulepreload" href="/snippets/leptos-pdf-84f1830662a46334/bundled_javascript/pdf_glue.bundle.mjs" crossorigin="anonymous" integrity="sha384-TfbbGUxKXi7YrwFctnTMDKsFRaN97kzzMbZb6tFf/eCcVrolMaEQwUBYrssHQNT4"><link rel="preload" href="/portfolio-fbc082d56b4f130a_bg.wasm" crossorigin="anonymous" integrity="sha384-vn3GybfULWW6qaW80TyawezdvmlHQu2WI6/6C3MJXmL5VZZKVXVaIb05bIYgBbmi" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/portfolio-eff0836e7fcd306e.js" crossorigin="anonymous" integrity="sha384-nUUx+ZctmiQLZV3OdgF323e0q9oQFmM+3l6syANqcNS52J6aXJmIJ0b8VxLkjQ9D"><link rel="modulepreload" href="/snippets/leptos-pdf-84f1830662a46334/bundled_javascript/pdf_glue.bundle.mjs" crossorigin="anonymous" integrity="sha384-TfbbGUxKXi7YrwFctnTMDKsFRaN97kzzMbZb6tFf/eCcVrolMaEQwUBYrssHQNT4"><link rel="preload" href="/portfolio-eff0836e7fcd306e_bg.wasm" crossorigin="anonymous" integrity="sha384-vjVbWaRPciFmEi2k17mqKW2PJ7le62c2buULjHryf37IouZjDqNMaOdCixDBPMyM" as="fetch" type="application/wasm"></head>
 
 <body></body>
 
