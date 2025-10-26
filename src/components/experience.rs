@@ -83,7 +83,7 @@ pub fn Experience() -> impl IntoView {
     ];
 
     let total_jobs = jobs.len();
-    let jobs_stored = store_value(jobs);
+    let jobs_stored = StoredValue::new(jobs);
 
     view! {
         <section id="experience" class="py-20 bg-gray-900">
@@ -96,7 +96,7 @@ pub fn Experience() -> impl IntoView {
                         on:click=move |_| set_show_all.update(|v| *v = !*v)
                         class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
                     >
-                        {move || if show_all.get() { "Show Sections" } else { "Show Timeline" }}
+                        {move || if show_all.get() { "Show Roles" } else { "Show Timeline" }}
                     </button>
                 </div>
                 <Show

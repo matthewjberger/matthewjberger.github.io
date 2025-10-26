@@ -18,7 +18,7 @@ pub fn Navigation() -> impl IntoView {
             <div class="max-w-6xl mx-auto px-4">
                 <div class="flex justify-between items-center h-16">
                     <a href="#hero" class="text-xl font-bold text-white">
-                        "Portfolio"
+                        "Matthew Berger - Portfolio"
                     </a>
                     <div class="flex items-center">
                         <div class="hidden md:flex space-x-8 items-center">
