@@ -1,4 +1,7 @@
-tailwind:
+install:
+    npm install
+
+tailwind: install
     npx tailwindcss -i ./input.css -o ./public/styles.css --minify
 
 tailwind-watch:

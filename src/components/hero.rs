@@ -11,12 +11,19 @@ pub fn Hero() -> impl IntoView {
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">
                     "Robotics Software Engineer"
                 </p>
-                <div class="flex gap-4 justify-center">
+                <div class="flex gap-4 justify-center flex-wrap">
                     <a
                         href="mailto:matthewjordanberger@gmail.com"
                         class="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors"
                     >
                         "Get In Touch"
+                    </a>
+                    <a
+                        href="/Resume.pdf"
+                        download="Berger_Matthew_Resume.pdf"
+                        class="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors"
+                    >
+                        "Download Resume"
                     </a>
                     <a
                         href="https://github.com/matthewjberger"
