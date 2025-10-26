@@ -1,5 +1,5 @@
-use leptos::prelude::*;
 use crate::ThemeContext;
+use leptos::prelude::*;
 
 #[component]
 pub fn Navigation() -> impl IntoView {
