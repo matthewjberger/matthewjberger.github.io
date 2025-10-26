@@ -32,7 +32,7 @@ jobs:
         run: rustup target add wasm32-unknown-unknown
 
       - name: lint
-        run: cargo clippy & cargo fmt
+        run: cargo clippy && cargo fmt --check
 
       - name: Build Tailwind CSS
         run: npx tailwindcss -i ./input.css -o ./public/styles.css --minify
