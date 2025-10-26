@@ -10,9 +10,6 @@ struct Job {
 
 #[component]
 pub fn Experience() -> impl IntoView {
-    let (current_index, set_current_index) = signal(0_usize);
-    let (show_all, set_show_all) = signal(false);
-
     let jobs = vec![
         Job {
             title: "Staff Software Engineer (Founding Engineer)",
@@ -83,6 +80,8 @@ pub fn Experience() -> impl IntoView {
     ];
 
     let total_jobs = jobs.len();
+    let (current_index, set_current_index) = signal(total_jobs - 1);
+    let (show_all, set_show_all) = signal(true);
     let jobs_stored = StoredValue::new(jobs);
 
     view! {
