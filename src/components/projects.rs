@@ -43,9 +43,51 @@ pub fn Projects() -> impl IntoView {
         },
         Project {
             title: "scoop-nerd-fonts",
-            description: "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement and 419 stars.",
+            description: "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement.",
             technologies: vec!["PowerShell", "Scoop", "Developer Tools"],
             link: "https://github.com/matthewjberger/scoop-nerd-fonts",
+        },
+        Project {
+            title: "enum2contract",
+            description: "A no_std compatible Rust derive macro for defining pub/sub messaging contracts using strongly typed enums. Generates topic strings, payload structs, and supports JSON and binary formats.",
+            technologies: vec!["Rust", "Macros", "Pub/Sub", "Embedded"],
+            link: "https://github.com/matthewjberger/enum2contract",
+        },
+        Project {
+            title: "enum2repr",
+            description: "A Rust derive macro that automates bidirectional conversion between enum variants and their numeric representations, eliminating boilerplate for manual type conversions.",
+            technologies: vec!["Rust", "Macros", "Code Generation"],
+            link: "https://github.com/matthewjberger/enum2repr",
+        },
+        Project {
+            title: "enum2pos",
+            description: "A Rust derive macro library that maps enum variants to their declaration position, enabling bidirectional transformation between variants and numeric indices.",
+            technologies: vec!["Rust", "Macros", "Code Generation"],
+            link: "https://github.com/matthewjberger/enum2pos",
+        },
+        Project {
+            title: "enum2str",
+            description: "A Rust derive macro that automatically implements the Display trait for enums with support for custom formatting, templates, and no_std compatibility.",
+            technologies: vec!["Rust", "Macros", "Code Generation"],
+            link: "https://github.com/matthewjberger/enum2str",
+        },
+        Project {
+            title: "eager",
+            description: "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment.",
+            technologies: vec!["C++", "CMake", "Ogre3D", "3D Graphics"],
+            link: "https://github.com/matthewjberger/eager",
+        },
+        Project {
+            title: "superbible",
+            description: "Rust implementations of OpenGL examples from the OpenGL Superbible 7th edition. Features advanced shader techniques, texture mapping, 3D transformations, and lighting models.",
+            technologies: vec!["Rust", "OpenGL", "GLSL", "3D Graphics"],
+            link: "https://github.com/matthewjberger/superbible",
+        },
+        Project {
+            title: "nightshade-viewer",
+            description: "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments. Features ECS architecture, global transform management, and WebAssembly compilation.",
+            technologies: vec!["Rust", "wgpu", "WGSL", "WebAssembly"],
+            link: "https://matthewjberger.github.io/nightshade-viewer/",
         },
     ];
 
