@@ -3,7 +3,7 @@
 
 <head>
   <!-- Tailwind CSS -->
-  <link rel="stylesheet" href="/styles-3b61b83742ad8c56.css" integrity="sha384-Vip8q91Z88M1OqEb69aiiJ1Qii5OjY/DHFf8DX0fXU1w2WePoSfBMlb/x4jhAiuM"/>
+  <link rel="stylesheet" href="/styles-99f2f31275b4f0e0.css" integrity="sha384-N+8YO2xOmnF2/yGmRz123bMvy/HCRE/D8pedXdVEJgAzRWYmMiGGv7QPGUDOUPFz"/>
 
   <!-- Include favicon in dist output: see https://trunkrs.dev/assets/#icon -->
   <link rel="icon" href="/favicon-e9cbd8f50cc65bf2.ico" integrity="sha384-YobgLXwtz0GhXVUTHml49p32guapVFlEG8UpQdDVN3kekOqkQi+qSXEpwp+yM4BW"/>
@@ -11,8 +11,8 @@
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   
 <script type="module">
-import init, * as bindings from '/portfolio-b8e7e48c3ddccce4.js';
-const wasm = await init({ module_or_path: '/portfolio-b8e7e48c3ddccce4_bg.wasm' });
+import init, * as bindings from '/portfolio-ccfc49cb62c5d5d4.js';
+const wasm = await init({ module_or_path: '/portfolio-ccfc49cb62c5d5d4_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -21,7 +21,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-<link rel="modulepreload" href="/portfolio-b8e7e48c3ddccce4.js" crossorigin="anonymous" integrity="sha384-jRXoFIE3Cl/kg9vk9zJs/MRRofyOadwx2M+5iFkuw/7whYXKjxTsM1PR5l/GfmeT"><link rel="preload" href="/portfolio-b8e7e48c3ddccce4_bg.wasm" crossorigin="anonymous" integrity="sha384-qx5vIasE97vGFbQW1Ra47WasgE3nBq44m5yw8Lbhem5js1oExZTBSSNW3CrrrmJI" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/portfolio-ccfc49cb62c5d5d4.js" crossorigin="anonymous" integrity="sha384-gaIF4GRpV7Vs8ohpxjh63qogs3NZAIHBL/TfV7yM8YGPSCBwk1X6M9nNI9KEy+jG"><link rel="preload" href="/portfolio-ccfc49cb62c5d5d4_bg.wasm" crossorigin="anonymous" integrity="sha384-fQBpSElV2KiS8A1XrfLLsh4bTtKHfrZQ32o5vPT1AaoVljDhk49UTVL1KdQRR2QL" as="fetch" type="application/wasm"></head>
 
 <body></body>
 
