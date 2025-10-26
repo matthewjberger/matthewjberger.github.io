@@ -103,6 +103,25 @@ pub fn Experience() -> impl IntoView {
                     when=move || show_all.get()
                     fallback=move || view! {
                         <div class="space-y-8">
+                            <div class="flex justify-between items-center mb-8">
+                                <button
+                                    on:click=move |_| set_current_index.update(|i| *i = i.saturating_sub(1))
+                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    disabled=move || current_index.get() == 0
+                                >
+                                    "← Older"
+                                </button>
+                                <span class="text-gray-300">
+                                    {move || format!("{} of {}", current_index.get() + 1, total_jobs)}
+                                </span>
+                                <button
+                                    on:click=move |_| set_current_index.update(|i| *i = (*i + 1).min(total_jobs - 1))
+                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    disabled={move || current_index.get() >= total_jobs - 1}
+                                >
+                                    "Newer →"
+                                </button>
+                            </div>
                             <div style="min-height: 500px;">
                                 {move || {
                                     let index = current_index.get();
@@ -128,25 +147,6 @@ pub fn Experience() -> impl IntoView {
                                     }
                                     })
                                 }}
-                            </div>
-                            <div class="flex justify-between items-center mt-8">
-                                <button
-                                    on:click=move |_| set_current_index.update(|i| *i = i.saturating_sub(1))
-                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                    disabled=move || current_index.get() == 0
-                                >
-                                    "← Older"
-                                </button>
-                                <span class="text-gray-300">
-                                    {move || format!("{} of {}", current_index.get() + 1, total_jobs)}
-                                </span>
-                                <button
-                                    on:click=move |_| set_current_index.update(|i| *i = (*i + 1).min(total_jobs - 1))
-                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                                    disabled={move || current_index.get() >= total_jobs - 1}
-                                >
-                                    "Newer →"
-                                </button>
                             </div>
                         </div>
                     }
