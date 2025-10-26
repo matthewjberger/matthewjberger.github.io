@@ -7,18 +7,18 @@ pub fn Hero() -> impl IntoView {
     let (scale, set_scale) = signal(1.8_f32);
 
     view! {
-        <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
+        <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
             <div class="text-center px-4">
                 <img
                     src="/bio-photo.jpg"
                     alt="Matthew Berger"
-                    class="rounded-lg mx-auto mb-6 border-2 border-blue-400 object-cover"
+                    class="rounded-lg mx-auto mb-6 border-2 border-blue-500 dark:border-blue-400 object-cover"
                     style="width: 180px; height: 180px;"
                 />
-                <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
-                    "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span> " 🦀"
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 dark:text-white mb-4">
+                    "Hi, I'm " <span class="text-blue-600 dark:text-blue-400">"Matthew Berger"</span> " 🦀"
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-8">
                     "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
@@ -69,11 +69,11 @@ pub fn Hero() -> impl IntoView {
                     on:click=move |_| set_show_pdf.set(false)
                 >
                     <div
-                        class="bg-gray-800 rounded-lg w-full max-w-6xl flex flex-col"
+                        class="bg-white dark:bg-gray-800 rounded-lg w-full max-w-6xl flex flex-col"
                         style:height="90vh"
                         on:click=move |e| e.stop_propagation()
                     >
-                        <div class="flex justify-between items-center p-4 border-b border-gray-700">
+                        <div class="flex justify-between items-center p-4 border-b border-gray-300 dark:border-gray-700">
                             <a
                                 href="/Resume.pdf"
                                 download="Berger_Matthew_Resume.pdf"
@@ -88,27 +88,27 @@ pub fn Hero() -> impl IntoView {
                                 <div class="flex items-center gap-2">
                                     <button
                                         on:click=move |_| set_scale.update(|s| *s = (*s - 0.1_f32).max(0.5))
-                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                        class="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
                                     >
                                         "−"
                                     </button>
-                                    <span class="text-gray-300">{move || format!("{:.0}%", scale.get() * 100.0)}</span>
+                                    <span class="text-gray-700 dark:text-gray-300">{move || format!("{:.0}%", scale.get() * 100.0)}</span>
                                     <button
                                         on:click=move |_| set_scale.update(|s| *s = (*s + 0.1_f32).min(3.0))
-                                        class="px-3 py-1 bg-gray-700 hover:bg-gray-600 rounded text-white"
+                                        class="px-3 py-1 bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 rounded text-gray-900 dark:text-white"
                                     >
                                         "+"
                                     </button>
                                 </div>
                                 <button
                                     on:click=move |_| set_show_pdf.set(false)
-                                    class="text-gray-400 hover:text-gray-200 text-2xl font-bold"
+                                    class="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 text-2xl font-bold"
                                 >
                                     "×"
                                 </button>
                             </div>
                         </div>
-                        <div class="bg-gray-700 p-4 text-center" style:flex="1" style:width="100%" style:height="100%" style:overflow="auto">
+                        <div class="bg-gray-200 dark:bg-gray-700 p-4 text-center" style:flex="1" style:width="100%" style:height="100%" style:overflow="auto">
                             <PdfRenderer
                                 url="/Resume.pdf"
                                 scale=scale

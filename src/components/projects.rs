@@ -125,10 +125,10 @@ pub fn Projects() -> impl IntoView {
     };
 
     view! {
-        <section id="projects" class="py-20 bg-gray-800">
+        <section id="projects" class="py-20 bg-gray-100 dark:bg-gray-800">
             <div class="max-w-6xl mx-auto px-4">
                 <div class="flex justify-between items-center mb-12">
-                    <h2 class="text-4xl font-bold text-white">
+                    <h2 class="text-4xl font-bold text-gray-900 dark:text-white">
                         "Projects"
                     </h2>
                     <div class="flex gap-2">
@@ -139,7 +139,7 @@ pub fn Projects() -> impl IntoView {
                                 if sort_order.get() == SortOrder::Alphabetical {
                                     format!("{} bg-blue-500 text-white", base)
                                 } else {
-                                    format!("{} bg-gray-700 text-gray-300 hover:bg-gray-600", base)
+                                    format!("{} bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600", base)
                                 }
                             }
                         >
@@ -152,7 +152,7 @@ pub fn Projects() -> impl IntoView {
                                 if sort_order.get() == SortOrder::ReverseAlphabetical {
                                     format!("{} bg-blue-500 text-white", base)
                                 } else {
-                                    format!("{} bg-gray-700 text-gray-300 hover:bg-gray-600", base)
+                                    format!("{} bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-600", base)
                                 }
                             }
                         >
@@ -163,14 +163,14 @@ pub fn Projects() -> impl IntoView {
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {move || sorted_projects().into_iter().map(|project| {
                         view! {
-                            <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-700">
+                            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-300 dark:border-gray-700">
                                 <div class="p-6">
-                                    <h3 class="text-xl font-bold mb-3 text-white">{project.title}</h3>
-                                    <p class="text-gray-300 mb-4 leading-relaxed">{project.description}</p>
+                                    <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">{project.title}</h3>
+                                    <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{project.description}</p>
                                     <div class="flex flex-wrap gap-2 mb-4">
                                         {project.technologies.into_iter().map(|tech| {
                                             view! {
-                                                <span class="px-3 py-1 bg-gray-800 text-gray-300 rounded text-sm border border-gray-700">
+                                                <span class="px-3 py-1 bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-300 rounded text-sm border border-gray-300 dark:border-gray-700">
                                                     {tech}
                                                 </span>
                                             }
@@ -179,7 +179,7 @@ pub fn Projects() -> impl IntoView {
                                     <a
                                         href=project.link
                                         target="_blank"
-                                        class="text-blue-400 hover:text-blue-300 font-medium inline-flex items-center gap-1 whitespace-nowrap"
+                                        class="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium inline-flex items-center gap-1 whitespace-nowrap"
                                     >
                                         "View Project"
                                         <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
