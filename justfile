@@ -30,3 +30,7 @@ check:
 # Formats the code using cargo fmt
 format:
     cargo fmt
+
+# Runs linter and displays warnings
+lint:
+    cargo clippy --all --tests -- -D warnings
