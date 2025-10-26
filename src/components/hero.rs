@@ -11,10 +11,10 @@ pub fn Hero() -> impl IntoView {
         <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
             <div class="text-center px-4">
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
-                    "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span>
+                    "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span> " 🦀"
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                    "Staff Software Engineer (Founding Engineer) at Hyphen"
+                    "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <a

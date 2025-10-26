@@ -13,21 +13,21 @@ pub fn Experience() -> impl IntoView {
     let jobs = vec![
         Job {
             title: "Staff Software Engineer (Founding Engineer)",
-            company: "Hyphen",
+            company: "Hyphen Robotics",
             period: "Sep 2022 - Present",
             achievements: vec![
                 "Founded food assembly robotics controls suite as first engineer, driving technical pivot from PLC to Rust architecture and achieving complete product delivery in 22 months securing $10M+ investment from Chipotle and Cava",
                 "Engineered full technology stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system and cloud infrastructure, including custom Yocto Linux distribution",
                 "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, handling 10K+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
                 "Transformed team of web developers into proficient Rust systems programmers through hands-on mentorship, architectural documentation, and pair programming",
-                "Designed deterministic configuration system enabling fleet scaling from single prototype to thousands of machines across multiple enterprise customers",
+                "Designed deterministic layered configuration system enabling fleet scaling from single prototype to thousands of machines across multiple enterprise customers",
                 "Created Hyphen Explorer tool achieving 100% adoption across all software engineers, ops technicians, and culinary operators for real-time IPC visualization, debugging, and system control",
                 "Published open-source Rust crates (enum2contract, enum2egui, enum2str, enum2pos, enum2repr) extending language capabilities for robotics",
             ],
         },
         Job {
             title: "Senior Software Engineer",
-            company: "Hyphen",
+            company: "Hyphen Robotics",
             period: "Jul 2021 - Sep 2022",
             achievements: vec![
                 "Hired to extend initial PLC-based system, identified scaling limitations that would prevent growth beyond prototype stage",
