@@ -18,6 +18,12 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/dragonglass",
         },
         Project {
+            title: "vulkan-example 🦀",
+            description: "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V.",
+            technologies: vec!["Rust", "Vulkan", "egui", "GLSL"],
+            link: "https://github.com/matthewjberger/vulkan-example",
+        },
+        Project {
             title: "freecs 🦀",
             description: "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code.",
             technologies: vec!["Rust", "ECS", "Game Engine", "Performance"],

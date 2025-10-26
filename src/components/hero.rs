@@ -4,16 +4,22 @@ use leptos_pdf::PdfRenderer;
 #[component]
 pub fn Hero() -> impl IntoView {
     let (show_pdf, set_show_pdf) = signal(false);
-    let (scale, set_scale) = signal(1.0_f32);
+    let (scale, set_scale) = signal(1.8_f32);
 
     view! {
         <section id="hero" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-800">
             <div class="text-center px-4">
+                <img
+                    src="/bio-photo.jpg"
+                    alt="Matthew Berger"
+                    class="rounded-lg mx-auto mb-6 border-2 border-blue-400 object-cover"
+                    style="width: 180px; height: 180px;"
+                />
                 <h1 class="text-5xl md:text-7xl font-bold text-white mb-4">
                     "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span> " 🦀"
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                    "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
+                    "Founding Staff Software Engineer at Hyphen Robotics"
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <a
@@ -95,7 +101,7 @@ pub fn Hero() -> impl IntoView {
                                 </button>
                             </div>
                         </div>
-                        <div class="bg-gray-700 p-4" style:flex="1" style:width="100%" style:height="100%" style:overflow="auto">
+                        <div class="bg-gray-700 p-4 text-center" style:flex="1" style:width="100%" style:height="100%" style:overflow="auto">
                             <PdfRenderer
                                 url="/Resume.pdf"
                                 scale=scale
