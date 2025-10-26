@@ -12,22 +12,40 @@ struct Project {
 pub fn Projects() -> impl IntoView {
     let projects = vec![
         Project {
-            title: "Portfolio Website",
-            description: "A modern portfolio website built with Rust and WebAssembly, featuring client-side rendering with Leptos and styled with Tailwind CSS.",
-            technologies: vec!["Rust", "Leptos", "WASM", "Tailwind CSS"],
-            link: "#",
+            title: "dragonglass",
+            description: "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor. Demonstrates modern systems programming applied to interactive 3D visualization.",
+            technologies: vec!["Rust", "Vulkan", "GLSL", "3D Graphics"],
+            link: "https://github.com/matthewjberger/dragonglass",
         },
         Project {
-            title: "Project Two",
-            description: "A full-stack web application that demonstrates modern development practices and clean architecture principles.",
-            technologies: vec!["TypeScript", "React", "Node.js"],
-            link: "#",
+            title: "freecs",
+            description: "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code.",
+            technologies: vec!["Rust", "ECS", "Game Engine", "Performance"],
+            link: "https://github.com/matthewjberger/freecs",
         },
         Project {
-            title: "Project Three",
-            description: "An open-source tool that helps developers streamline their workflow and increase productivity.",
-            technologies: vec!["Python", "Docker", "AWS"],
-            link: "#",
+            title: "wgpu-example",
+            description: "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
+            technologies: vec!["Rust", "wgpu", "egui", "WebAssembly"],
+            link: "https://github.com/matthewjberger/wgpu-example",
+        },
+        Project {
+            title: "enum2egui",
+            description: "A procedural macro for automatically generating egui UI code from Rust types. Supports structs, enums, nested types, and provides both read-only and mutable editing interfaces.",
+            technologies: vec!["Rust", "Macros", "egui", "Code Generation"],
+            link: "https://github.com/matthewjberger/enum2egui",
+        },
+        Project {
+            title: "taps",
+            description: "A Tokio async pub/sub message broker for in-process communication. Enables decoupled component communication with topic-based routing and scalable async architecture.",
+            technologies: vec!["Rust", "Tokio", "Async", "Pub/Sub"],
+            link: "https://github.com/matthewjberger/taps",
+        },
+        Project {
+            title: "scoop-nerd-fonts",
+            description: "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement and 419 stars.",
+            technologies: vec!["PowerShell", "Scoop", "Developer Tools"],
+            link: "https://github.com/matthewjberger/scoop-nerd-fonts",
         },
     ];
 
@@ -55,6 +73,7 @@ pub fn Projects() -> impl IntoView {
                                     </div>
                                     <a
                                         href=project.link
+                                        target="_blank"
                                         class="text-blue-400 hover:text-blue-300 font-medium"
                                     >
                                         "View Project →"

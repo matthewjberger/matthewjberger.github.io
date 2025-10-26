@@ -4,12 +4,12 @@ use leptos::prelude::*;
 pub fn Navigation() -> impl IntoView {
     let nav_items = vec![
         ("About", "#about"),
-        ("Projects", "#projects"),
         ("Experience", "#experience"),
+        ("Projects", "#projects"),
         ("Education", "#education"),
     ];
 
-    let external_link = ("Articles", "https://matthewjberger.github.io/articles");
+    let external_link = ("Articles", "https://matthewberger.dev/articles");
 
     view! {
         <nav class="fixed top-0 left-0 right-0 bg-gray-900 shadow-md z-50 border-b border-gray-800">

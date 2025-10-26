@@ -1,0 +1,149 @@
+\documentclass[a4paper]{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \usepackage[utf8]{inputenc}
+    \usepackage[T1]{fontenc}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \large \textbf{\textsc{#1}}}
+    \vspace*{-6pt} \lineunder
+    \vspace*{4pt}
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+
+\begin{document}
+\vspace*{-40pt}
+
+%==== Profile ====%
+%\vspace*{-10pt}
+\begin{center}
+    {\Huge \scshape \textbf{Matthew Berger}}\\
+    \vspace*{4pt}
+    Littleton, CO $\cdot$ matthewjordanberger@gmail.com $\cdot$ 775.357.7884 $\cdot$ matthewberger.dev\\
+\end{center}
+
+%==== Summary ====%
+\vspace*{-6pt}
+Founding engineer who architected and scaled robotics control suite from concept to enterprise deployment. 10+ years Rust expertise including pre-1.0 adoption, with 5+ years in production systems. Transformed company technical direction from PLCs to modern architecture, securing major enterprise investments.
+\vspace*{8pt}
+
+%==== Experience ====%
+\header{Work Experience}
+
+\textbf{Hyphen (Culinary Robotics)} \hfill Remote\\
+\textit{Staff Software Engineer (Founding Engineer)} \hfill September 2022 - Present\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Founded robotics platform as first engineer $\bullet$ Led pivot from PLC to Rust $\bullet$ \textbf{22 months to production}
+    \item Achieved complete product delivery securing \textbf{\$10M+ investment} from Chipotle and Cava
+    \item Built core async message broker: \textbf{10K+ msgs/sec} $\bullet$ \textbf{Zero message loss over 3 years} $\bullet$ \textbf{<1ms latency}
+    \item Transformed \textbf{8-person web team} into proficient Rust systems programmers through mentorship and documentation
+    \item Designed deterministic config system enabling scaling from \textbf{1 to 1000+ robots} across enterprise deployments
+    \item Engineered full stack from bare-metal firmware (RP2040/Embassy) to cloud infrastructure on custom Yocto Linux
+    \item Created Hyphen Explorer used daily by all engineers and operators $\bullet$ \textbf{100\% team adoption}
+    \item Prevented 10+ critical failures through predictive architecture (connection pooling, event-driven telemetry, config diffing)
+    \item Published open-source Rust crates (enum2contract, enum2egui, enum2str) with \textbf{1000+ downloads}
+    \item Established CI/CD pipeline reducing deployment time from hours to \textbf{<20 minutes}
+\end{itemize}
+
+\textbf{Hyphen (Culinary Robotics)} \hfill United States\\
+\textit{Senior Software Engineer} \hfill July 2021 - September 2022\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Diagnosed critical scaling limitations in legacy PLC system preventing growth beyond prototype
+    \item Led architectural pivot to embedded Rust, convincing C-suite to abandon \textbf{\$500K} PLC investment
+    \item Prototyped RP2040 firmware with Embassy-rs
+    \item Built AWS infrastructure with Pulumi while transitioning company to new technical direction
+\end{itemize}
+
+\textbf{Sierra Nevada Corporation} \hfill Englewood, CO\\
+\textit{Software Engineer III} \hfill May 2020 - July 2021\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Developed aerospace imaging software processing \textbf{5GB/sec} pixel data during flight operations
+    \item Built Rust simulator for unavailable hardware, saving \textbf{3 months} on project timeline
+\end{itemize}
+
+\textbf{Scientific Games} \hfill Reno, NV\\
+\textit{Software Engineer} \hfill July 2019 - May 2020\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Resolved performance defects improving frame rates by \textbf{40\%} in Unity-based casino platform
+\end{itemize}
+
+\textbf{Hamilton Company} \hfill Reno, NV\\
+\textit{Software Engineer} \hfill January 2018 - July 2019\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Built safety-critical software for liquid-handling medical robots $\bullet$ \textbf{FDA compliance achieved}
+    \item Reduced calibration development from \textbf{2 months to 2 weeks} through reusable plugin framework
+    \item Decreased environment setup from \textbf{8 hours to 5 minutes} with automated bootstrapper
+    \item Architected diagnostic application for largest OEM customer (\textbf{\$2M contract})
+\end{itemize}
+
+\textbf{Hamilton Company} \hfill Reno, NV\\
+\textit{Software Engineering Intern} \hfill October 2014 - December 2017\\
+\vspace{-1mm}
+\begin{itemize} \itemsep 1pt
+    \item Automated quality testing, saving \textbf{40 hours/robot} through gravimetric analysis automation
+    \item Developed tools saving \textbf{20+ hours weekly} across 15-person development team
+\end{itemize}
+
+\header{Technical Skills}
+\textbf{Languages:} Rust (10+ years, pre-1.0 early adopter), C++, TypeScript, Python, C\# $\bullet$ \textbf{Systems:} Distributed Systems, Real-time Control, Embedded Linux, Message Brokers $\bullet$ \textbf{Tools:} AWS, Docker, Kubernetes, Yocto Linux, GitHub Actions
+
+\header{Education}
+\textbf{University of Nevada, Reno} \hfill BS Computer Science \& Engineering, Minor in Mathematics, 2017
+
+\end{document}

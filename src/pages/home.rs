@@ -13,8 +13,8 @@ pub fn Home() -> impl IntoView {
             <Navigation />
             <Hero />
             <About />
-            <Projects />
             <Experience />
+            <Projects />
             <Education />
         </div>
     }
