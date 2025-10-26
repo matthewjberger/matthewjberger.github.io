@@ -1,5 +1,11 @@
 use leptos::prelude::*;
 
+#[derive(Clone, Copy, PartialEq)]
+enum SortOrder {
+    Alphabetical,
+    ReverseAlphabetical,
+}
+
 #[derive(Clone)]
 struct Project {
     title: &'static str,
@@ -10,6 +16,8 @@ struct Project {
 
 #[component]
 pub fn Projects() -> impl IntoView {
+    let (sort_order, set_sort_order) = signal(SortOrder::Alphabetical);
+
     let projects = vec![
         Project {
             title: "dragonglass 🦀",
@@ -103,14 +111,57 @@ pub fn Projects() -> impl IntoView {
         },
     ];
 
+    let sorted_projects = move || {
+        let mut projects_clone = projects.clone();
+        match sort_order.get() {
+            SortOrder::Alphabetical => {
+                projects_clone.sort_by(|a, b| a.title.cmp(b.title));
+            }
+            SortOrder::ReverseAlphabetical => {
+                projects_clone.sort_by(|a, b| b.title.cmp(a.title));
+            }
+        }
+        projects_clone
+    };
+
     view! {
         <section id="projects" class="py-20 bg-gray-800">
             <div class="max-w-6xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-white">
-                    "Projects"
-                </h2>
+                <div class="flex justify-between items-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">
+                        "Projects"
+                    </h2>
+                    <div class="flex gap-2">
+                        <button
+                            on:click=move |_| set_sort_order.set(SortOrder::Alphabetical)
+                            class=move || {
+                                let base = "px-4 py-2 rounded-lg transition-colors";
+                                if sort_order.get() == SortOrder::Alphabetical {
+                                    format!("{} bg-blue-500 text-white", base)
+                                } else {
+                                    format!("{} bg-gray-700 text-gray-300 hover:bg-gray-600", base)
+                                }
+                            }
+                        >
+                            "A-Z"
+                        </button>
+                        <button
+                            on:click=move |_| set_sort_order.set(SortOrder::ReverseAlphabetical)
+                            class=move || {
+                                let base = "px-4 py-2 rounded-lg transition-colors";
+                                if sort_order.get() == SortOrder::ReverseAlphabetical {
+                                    format!("{} bg-blue-500 text-white", base)
+                                } else {
+                                    format!("{} bg-gray-700 text-gray-300 hover:bg-gray-600", base)
+                                }
+                            }
+                        >
+                            "Z-A"
+                        </button>
+                    </div>
+                </div>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {projects.into_iter().map(|project| {
+                    {move || sorted_projects().into_iter().map(|project| {
                         view! {
                             <div class="bg-gray-900 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow border border-gray-700">
                                 <div class="p-6">
