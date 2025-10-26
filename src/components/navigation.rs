@@ -2,6 +2,8 @@ use leptos::prelude::*;
 
 #[component]
 pub fn Navigation() -> impl IntoView {
+    let (mobile_menu_open, set_mobile_menu_open) = signal(false);
+
     let nav_items = vec![
         ("About", "#about"),
         ("Experience", "#experience"),
@@ -18,12 +20,50 @@ pub fn Navigation() -> impl IntoView {
                     <a href="#hero" class="text-xl font-bold text-white">
                         "Portfolio"
                     </a>
-                    <div class="hidden md:flex space-x-8 items-center">
-                        {nav_items.into_iter().map(|(label, href)| {
+                    <div class="flex items-center">
+                        <div class="hidden md:flex space-x-8 items-center">
+                            {nav_items.clone().into_iter().map(|(label, href)| {
+                                view! {
+                                    <a
+                                        href=href
+                                        class="text-gray-300 hover:text-blue-400 transition-colors"
+                                    >
+                                        {label}
+                                    </a>
+                                }
+                            }).collect_view()}
+                            <a
+                                href=external_link.1
+                                target="_blank"
+                                class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
+                                    <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
+                                </svg>
+                                {external_link.0}
+                            </a>
+                        </div>
+                        <button
+                            on:click=move |_| set_mobile_menu_open.update(|open| *open = !*open)
+                            class="md:hidden text-white"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <Show when=move || mobile_menu_open.get()>
+                <div class="md:hidden bg-gray-800 border-t border-gray-700">
+                    <div class="px-4 py-2 space-y-2">
+                        {nav_items.clone().into_iter().map(|(label, href)| {
                             view! {
                                 <a
                                     href=href
-                                    class="text-gray-300 hover:text-blue-400 transition-colors"
+                                    on:click=move |_| set_mobile_menu_open.set(false)
+                                    class="block py-2 text-gray-300 hover:text-blue-400 transition-colors"
                                 >
                                     {label}
                                 </a>
@@ -32,17 +72,14 @@ pub fn Navigation() -> impl IntoView {
                         <a
                             href=external_link.1
                             target="_blank"
-                            class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                            on:click=move |_| set_mobile_menu_open.set(false)
+                            class="block py-2 text-blue-400 hover:text-blue-300 transition-colors"
                         >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
-                                <path d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z" />
-                                <path d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z" />
-                            </svg>
                             {external_link.0}
                         </a>
                     </div>
                 </div>
-            </div>
+            </Show>
         </nav>
     }
 }

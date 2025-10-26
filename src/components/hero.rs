@@ -66,18 +66,17 @@ pub fn Hero() -> impl IntoView {
                         on:click=move |e| e.stop_propagation()
                     >
                         <div class="flex justify-between items-center p-4 border-b border-gray-700">
-                            <h2 class="text-xl font-bold text-white">"Resume"</h2>
+                            <a
+                                href="/Resume.pdf"
+                                download="Berger_Matthew_Resume.pdf"
+                                class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors inline-flex items-center gap-2"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                                "Download"
+                            </a>
                             <div class="flex items-center gap-4">
-                                <a
-                                    href="/Resume.pdf"
-                                    download="Berger_Matthew_Resume.pdf"
-                                    class="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors inline-flex items-center gap-2"
-                                >
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
-                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
-                                    </svg>
-                                    "Download"
-                                </a>
                                 <div class="flex items-center gap-2">
                                     <button
                                         on:click=move |_| set_scale.update(|s| *s = (*s - 0.1_f32).max(0.5))
