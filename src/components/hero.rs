@@ -19,7 +19,7 @@ pub fn Hero() -> impl IntoView {
                     "Hi, I'm " <span class="text-blue-400">"Matthew Berger"</span> " 🦀"
                 </h1>
                 <p class="text-xl md:text-2xl text-gray-300 mb-8">
-                    "Founding Staff Software Engineer at Hyphen Robotics"
+                    "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
                 </p>
                 <div class="flex gap-4 justify-center flex-wrap">
                     <a

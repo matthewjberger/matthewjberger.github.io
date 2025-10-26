@@ -10,6 +10,9 @@ struct Job {
 
 #[component]
 pub fn Experience() -> impl IntoView {
+    let (current_index, set_current_index) = signal(0_usize);
+    let (show_all, set_show_all) = signal(false);
+
     let jobs = vec![
         Job {
             title: "Staff Software Engineer (Founding Engineer)",
@@ -79,33 +82,99 @@ pub fn Experience() -> impl IntoView {
         },
     ];
 
+    let total_jobs = jobs.len();
+    let jobs_stored = store_value(jobs);
+
     view! {
         <section id="experience" class="py-20 bg-gray-900">
             <div class="max-w-4xl mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-white">
-                    "Experience"
-                </h2>
-                <div class="space-y-8">
-                    {jobs.into_iter().map(|job| {
-                        view! {
-                            <div class="border-l-4 border-blue-500 pl-6">
-                                <h3 class="text-2xl font-bold text-white">{job.title}</h3>
-                                <p class="text-lg text-gray-300 mb-2">{job.company}</p>
-                                <p class="text-sm text-gray-400 mb-4">{job.period}</p>
-                                <ul class="space-y-2">
-                                    {job.achievements.into_iter().map(|achievement| {
-                                        view! {
-                                            <li class="flex items-start">
-                                                <span class="text-blue-400 mr-2">"•"</span>
-                                                <span class="text-gray-300">{achievement}</span>
-                                            </li>
-                                        }
-                                    }).collect_view()}
-                                </ul>
-                            </div>
-                        }
-                    }).collect_view()}
+                <div class="flex justify-between items-center mb-12">
+                    <h2 class="text-4xl font-bold text-white">
+                        "Experience"
+                    </h2>
+                    <button
+                        on:click=move |_| set_show_all.update(|v| *v = !*v)
+                        class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors"
+                    >
+                        {move || if show_all.get() { "Show Sections" } else { "Show Timeline" }}
+                    </button>
                 </div>
+                <Show
+                    when=move || show_all.get()
+                    fallback=move || view! {
+                        <div class="space-y-8">
+                            <div style="min-height: 500px;">
+                                {move || {
+                                    let index = current_index.get();
+                                    let reversed_index = total_jobs - 1 - index;
+                                    jobs_stored.with_value(|jobs| {
+                                        let job = &jobs[reversed_index];
+                                        view! {
+                                        <div class="border-l-4 border-blue-500 pl-6">
+                                            <h3 class="text-2xl font-bold text-white">{job.title}</h3>
+                                            <p class="text-lg text-gray-300 mb-2">{job.company}</p>
+                                            <p class="text-sm text-gray-400 mb-4">{job.period}</p>
+                                            <ul class="space-y-2">
+                                                {job.achievements.iter().map(|achievement| {
+                                                    view! {
+                                                        <li class="flex items-start">
+                                                            <span class="text-blue-400 mr-2">"•"</span>
+                                                            <span class="text-gray-300">{*achievement}</span>
+                                                        </li>
+                                                    }
+                                                }).collect_view()}
+                                            </ul>
+                                        </div>
+                                    }
+                                    })
+                                }}
+                            </div>
+                            <div class="flex justify-between items-center mt-8">
+                                <button
+                                    on:click=move |_| set_current_index.update(|i| *i = i.saturating_sub(1))
+                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    disabled=move || current_index.get() == 0
+                                >
+                                    "← Older"
+                                </button>
+                                <span class="text-gray-300">
+                                    {move || format!("{} of {}", current_index.get() + 1, total_jobs)}
+                                </span>
+                                <button
+                                    on:click=move |_| set_current_index.update(|i| *i = (*i + 1).min(total_jobs - 1))
+                                    class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                    disabled={move || current_index.get() >= total_jobs - 1}
+                                >
+                                    "Newer →"
+                                </button>
+                            </div>
+                        </div>
+                    }
+                >
+                    <div class="space-y-8">
+                        {jobs_stored.with_value(|jobs| {
+                            jobs.iter().map(|job| {
+                                view! {
+                                    <div class="border-l-4 border-blue-500 pl-6">
+                                        <h3 class="text-2xl font-bold text-white">{job.title}</h3>
+                                        <p class="text-lg text-gray-300 mb-2">{job.company}</p>
+                                        <p class="text-sm text-gray-400 mb-4">{job.period}</p>
+                                        <ul class="space-y-2">
+                                            {job.achievements.iter().map(|achievement| {
+                                                view! {
+                                                    <li class="flex items-start">
+                                                        <span class="text-blue-400 mr-2">"•"</span>
+                                                        <span class="text-gray-300">{*achievement}</span>
+                                                    </li>
+                                                }
+                                            }).collect_view()}
+                                        </ul>
+                                    </div>
+                                }
+                            }).collect_view()
+                        })}
+                    </div>
+                </Show>
             </div>
         </section>
     }
