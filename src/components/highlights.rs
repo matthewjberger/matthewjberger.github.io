@@ -107,7 +107,7 @@ pub fn Highlights() -> impl IntoView {
                                                         on:click=move |e| e.stop_propagation()
                                                         class="block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-center font-medium"
                                                     >
-                                                        "Live Demo"
+                                                        "Live Demo (Desktop Browser)"
                                                     </a>
                                                 </div>
                                             }
