@@ -11,7 +11,7 @@ struct Highlight {
 
 #[component]
 pub fn Highlights() -> impl IntoView {
-    let highlights = vec![
+    let mut highlights = vec![
         Highlight {
             title: "dragonglass 🦀",
             description: "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor.",
@@ -76,6 +76,8 @@ pub fn Highlights() -> impl IntoView {
             demo_link: None,
         },
     ];
+
+    highlights.sort_by(|a, b| a.title.cmp(b.title));
 
     view! {
         <section id="highlights" class="py-20 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
