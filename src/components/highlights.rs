@@ -34,25 +34,11 @@ pub fn Highlights() -> impl IntoView {
             demo_link: Some("https://matthewberger.dev/nightshade-viewer"),
         },
         Highlight {
-            title: "wgpu-example 🦀",
-            description: "A minimal vertical slice of wgpu boilerplate. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
-            technologies: vec!["Rust", "wgpu", "egui", "WebAssembly"],
-            link: "https://github.com/matthewjberger/wgpu-example",
-            demo_link: Some("https://matthewberger.dev/wgpu-example/"),
-        },
-        Highlight {
             title: "wgpu-rendergraph 🦀",
-            description: "Modern render graph implementation using wgpu with optimized resource management and parallel execution.",
+            description: "Modern render graph implementation using wgpu with optimized resource management.",
             technologies: vec!["Rust", "wgpu", "Render Graph", "Graphics"],
             link: "https://github.com/matthewjberger/wgpu-rendergraph",
             demo_link: Some("https://matthewberger.dev/wgpu-rendergraph/"),
-        },
-        Highlight {
-            title: "vulkan-example 🦀",
-            description: "A minimal vertical slice of Vulkan boilerplate with Rust, featuring advanced techniques like multidraw indirect and mesh/task shaders.",
-            technologies: vec!["Rust", "Vulkan", "egui", "GLSL"],
-            link: "https://github.com/matthewjberger/vulkan-example",
-            demo_link: None,
         },
         Highlight {
             title: "freecs 🦀",
@@ -62,18 +48,11 @@ pub fn Highlights() -> impl IntoView {
             demo_link: None,
         },
         Highlight {
-            title: "superbible 🦀",
-            description: "Rust implementations of OpenGL examples from the OpenGL Superbible 7th edition. Features advanced shader techniques, texture mapping, 3D transformations, and lighting models.",
-            technologies: vec!["Rust", "OpenGL", "GLSL", "3D Graphics"],
-            link: "https://github.com/matthewjberger/superbible",
-            demo_link: None,
-        },
-        Highlight {
-            title: "obsidian 🦀",
-            description: "A modern game engine written in Rust with modular architecture and high-performance rendering capabilities.",
-            technologies: vec!["Rust", "Game Engine", "Graphics", "ECS"],
-            link: "https://github.com/matthewjberger/obsidian",
-            demo_link: None,
+            title: "wgpu-example 🦀",
+            description: "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
+            technologies: vec!["Rust", "wgpu", "egui", "WebAssembly"],
+            link: "https://github.com/matthewjberger/wgpu-example",
+            demo_link: Some("https://matthewberger.dev/wgpu-example/"),
         },
     ];
 
@@ -93,7 +72,11 @@ pub fn Highlights() -> impl IntoView {
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {highlights.into_iter().map(|highlight| {
                         view! {
-                            <div class="bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-gray-300 dark:border-gray-700 flex flex-col">
+                            <a
+                                href=highlight.link
+                                target="_blank"
+                                class="block bg-white dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden border border-gray-300 dark:border-gray-700 hover:shadow-xl transition-all hover:scale-105 cursor-pointer flex flex-col"
+                            >
                                 <div class="p-6 flex-1">
                                     <h3 class="text-xl font-bold mb-3 text-gray-900 dark:text-white">{highlight.title}</h3>
                                     <p class="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">{highlight.description}</p>
@@ -107,27 +90,21 @@ pub fn Highlights() -> impl IntoView {
                                         }).collect_view()}
                                     </div>
                                 </div>
-                                <div class="p-6 pt-0 flex gap-3">
-                                    <a
-                                        href=highlight.link
-                                        target="_blank"
-                                        class="flex-1 px-4 py-2 bg-gray-200 dark:bg-gray-700 text-gray-900 dark:text-white rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors text-center font-medium"
-                                    >
-                                        "View Code"
-                                    </a>
-                                    {highlight.demo_link.map(|demo| {
-                                        view! {
+                                {highlight.demo_link.map(|demo| {
+                                    view! {
+                                        <div class="p-6 pt-0">
                                             <a
                                                 href=demo
                                                 target="_blank"
-                                                class="flex-1 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-center font-medium"
+                                                on:click=move |e| e.stop_propagation()
+                                                class="block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-center font-medium"
                                             >
                                                 "Live Demo"
                                             </a>
-                                        }
-                                    })}
-                                </div>
-                            </div>
+                                        </div>
+                                    }
+                                })}
+                            </a>
                         }
                     }).collect_view()}
                 </div>
