@@ -8,6 +8,7 @@ pub fn Navigation() -> impl IntoView {
 
     let nav_items = vec![
         ("About", "#about"),
+        ("Highlights", "#highlights"),
         ("Experience", "#experience"),
         ("Projects", "#projects"),
         ("Education", "#education"),

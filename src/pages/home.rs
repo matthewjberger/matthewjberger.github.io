@@ -2,6 +2,7 @@ use crate::components::about::About;
 use crate::components::education::Education;
 use crate::components::experience::Experience;
 use crate::components::hero::Hero;
+use crate::components::highlights::Highlights;
 use crate::components::navigation::Navigation;
 use crate::components::projects::Projects;
 use leptos::prelude::*;
@@ -13,6 +14,7 @@ pub fn Home() -> impl IntoView {
             <Navigation />
             <Hero />
             <About />
+            <Highlights />
             <Experience />
             <Projects />
             <Education />

@@ -20,12 +20,6 @@ pub fn Projects() -> impl IntoView {
 
     let projects = vec![
         Project {
-            title: "dragonglass 🦀",
-            description: "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor. Demonstrates modern systems programming applied to interactive 3D visualization.",
-            technologies: vec!["Rust", "Vulkan", "GLSL", "3D Graphics"],
-            link: "https://github.com/matthewjberger/dragonglass",
-        },
-        Project {
             title: "eager",
             description: "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment.",
             technologies: vec!["C++", "CMake", "Ogre3D", "3D Graphics"],
@@ -62,22 +56,10 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/enum2str",
         },
         Project {
-            title: "freecs 🦀",
-            description: "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code.",
-            technologies: vec!["Rust", "ECS", "Game Engine", "Performance"],
-            link: "https://github.com/matthewjberger/freecs",
-        },
-        Project {
             title: "frost 🦀",
             description: "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations.",
             technologies: vec!["Rust", "Interpreter", "Programming Language"],
             link: "https://github.com/matthewjberger/frost",
-        },
-        Project {
-            title: "nightshade-viewer 🦀",
-            description: "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments. Features ECS architecture, global transform management, and WebAssembly compilation.",
-            technologies: vec!["Rust", "wgpu", "WGSL", "WebAssembly"],
-            link: "https://matthewjberger.github.io/nightshade-viewer/",
         },
         Project {
             title: "scoop-nerd-fonts",
@@ -86,28 +68,10 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/scoop-nerd-fonts",
         },
         Project {
-            title: "superbible 🦀",
-            description: "Rust implementations of OpenGL examples from the OpenGL Superbible 7th edition. Features advanced shader techniques, texture mapping, 3D transformations, and lighting models.",
-            technologies: vec!["Rust", "OpenGL", "GLSL", "3D Graphics"],
-            link: "https://github.com/matthewjberger/superbible",
-        },
-        Project {
             title: "taps 🦀",
             description: "A Tokio async pub/sub message broker for in-process communication. Enables decoupled component communication with topic-based routing and scalable async architecture.",
             technologies: vec!["Rust", "Tokio", "Async", "Pub/Sub"],
             link: "https://github.com/matthewjberger/taps",
-        },
-        Project {
-            title: "vulkan-example 🦀",
-            description: "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V.",
-            technologies: vec!["Rust", "Vulkan", "egui", "GLSL"],
-            link: "https://github.com/matthewjberger/vulkan-example",
-        },
-        Project {
-            title: "wgpu-example 🦀",
-            description: "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
-            technologies: vec!["Rust", "wgpu", "egui", "WebAssembly"],
-            link: "https://github.com/matthewjberger/wgpu-example",
         },
     ];
 
