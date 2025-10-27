@@ -22,49 +22,49 @@ pub fn Projects() -> impl IntoView {
         Project {
             title: "eager",
             description: "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment.",
-            technologies: vec!["C++", "CMake", "Ogre3D", "3D Graphics"],
+            technologies: vec!["C++", "Ogre3D", "CMake"],
             link: "https://github.com/matthewjberger/eager",
         },
         Project {
             title: "enum2contract 🦀",
             description: "A no_std compatible Rust derive macro for defining pub/sub messaging contracts using strongly typed enums. Generates topic strings, payload structs, and supports JSON and binary formats.",
-            technologies: vec!["Rust", "Macros", "Pub/Sub", "Embedded"],
+            technologies: vec!["Rust", "Macros", "no_std"],
             link: "https://github.com/matthewjberger/enum2contract",
         },
         Project {
             title: "enum2egui 🦀",
             description: "A procedural macro for automatically generating egui UI code from Rust types. Supports structs, enums, nested types, and provides both read-only and mutable editing interfaces.",
-            technologies: vec!["Rust", "Macros", "egui", "Code Generation"],
+            technologies: vec!["Rust", "Macros", "egui"],
             link: "https://github.com/matthewjberger/enum2egui",
         },
         Project {
             title: "enum2pos 🦀",
             description: "A Rust derive macro library that maps enum variants to their declaration position, enabling bidirectional transformation between variants and numeric indices.",
-            technologies: vec!["Rust", "Macros", "Code Generation"],
+            technologies: vec!["Rust", "Macros"],
             link: "https://github.com/matthewjberger/enum2pos",
         },
         Project {
             title: "enum2repr 🦀",
             description: "A Rust derive macro that automates bidirectional conversion between enum variants and their numeric representations, eliminating boilerplate for manual type conversions.",
-            technologies: vec!["Rust", "Macros", "Code Generation"],
+            technologies: vec!["Rust", "Macros"],
             link: "https://github.com/matthewjberger/enum2repr",
         },
         Project {
             title: "enum2str 🦀",
             description: "A Rust derive macro that automatically implements the Display trait for enums with support for custom formatting, templates, and no_std compatibility.",
-            technologies: vec!["Rust", "Macros", "Code Generation"],
+            technologies: vec!["Rust", "Macros", "no_std"],
             link: "https://github.com/matthewjberger/enum2str",
         },
         Project {
             title: "frost 🦀",
             description: "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations.",
-            technologies: vec!["Rust", "Interpreter", "Programming Language"],
+            technologies: vec!["Rust", "Interpreter", "REPL"],
             link: "https://github.com/matthewjberger/frost",
         },
         Project {
             title: "scoop-nerd-fonts",
             description: "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement.",
-            technologies: vec!["PowerShell", "Scoop", "Developer Tools"],
+            technologies: vec!["PowerShell", "Scoop", "Fonts"],
             link: "https://github.com/matthewjberger/scoop-nerd-fonts",
         },
         Project {
@@ -76,13 +76,13 @@ pub fn Projects() -> impl IntoView {
         Project {
             title: "superbible 🦀",
             description: "Rust implementations of OpenGL examples from the OpenGL Superbible 7th edition. Features advanced shader techniques, texture mapping, 3D transformations, and lighting models.",
-            technologies: vec!["Rust", "OpenGL", "GLSL", "3D Graphics"],
+            technologies: vec!["Rust", "OpenGL", "GLSL"],
             link: "https://github.com/matthewjberger/superbible",
         },
         Project {
             title: "obsidian 🦀",
             description: "A modern game engine written in Rust with modular architecture and high-performance rendering capabilities.",
-            technologies: vec!["Rust", "Game Engine", "Graphics", "ECS"],
+            technologies: vec!["Rust", "Game Engine", "ECS"],
             link: "https://github.com/matthewjberger/obsidian",
         },
         Project {
