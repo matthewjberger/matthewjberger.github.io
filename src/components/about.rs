@@ -13,7 +13,7 @@ pub fn About() -> impl IntoView {
                         "A passionate software architect automating the food industry with Rust 🦀🤖🥗"
                     </p>
                     <p class="text-gray-700 dark:text-gray-300 leading-relaxed text-lg text-center">
-                        "Founding engineer with 11 years Rust expertise (pre-1.0 early adopter), 5+ years in production systems who built food assembly robotics controls suite from zero in 22 months, securing $10M+ investment from Chipotle and Cava."
+                        "Founding engineer with 11 years Rust experience (pre-1.0 early adopter), 5+ years in production systems who built food assembly robotics controls suite from zero in 22 months, securing $10M+ investment from Chipotle and Cava."
                     </p>
                 </div>
             </div>
