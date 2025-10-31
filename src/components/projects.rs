@@ -26,36 +26,6 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/eager",
         },
         Project {
-            title: "enum2contract 🦀",
-            description: "A no_std compatible Rust derive macro for defining pub/sub messaging contracts using strongly typed enums. Generates topic strings, payload structs, and supports JSON and binary formats.",
-            technologies: vec!["Rust", "Macros", "no_std"],
-            link: "https://github.com/matthewjberger/enum2contract",
-        },
-        Project {
-            title: "enum2egui 🦀",
-            description: "A procedural macro for automatically generating egui UI code from Rust types. Supports structs, enums, nested types, and provides both read-only and mutable editing interfaces.",
-            technologies: vec!["Rust", "Macros", "egui"],
-            link: "https://github.com/matthewjberger/enum2egui",
-        },
-        Project {
-            title: "enum2pos 🦀",
-            description: "A Rust derive macro library that maps enum variants to their declaration position, enabling bidirectional transformation between variants and numeric indices.",
-            technologies: vec!["Rust", "Macros"],
-            link: "https://github.com/matthewjberger/enum2pos",
-        },
-        Project {
-            title: "enum2repr 🦀",
-            description: "A Rust derive macro that automates bidirectional conversion between enum variants and their numeric representations, eliminating boilerplate for manual type conversions.",
-            technologies: vec!["Rust", "Macros"],
-            link: "https://github.com/matthewjberger/enum2repr",
-        },
-        Project {
-            title: "enum2str 🦀",
-            description: "A Rust derive macro that automatically implements the Display trait for enums with support for custom formatting, templates, and no_std compatibility.",
-            technologies: vec!["Rust", "Macros", "no_std"],
-            link: "https://github.com/matthewjberger/enum2str",
-        },
-        Project {
             title: "frost 🦀",
             description: "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations.",
             technologies: vec!["Rust", "Interpreter", "REPL"],
@@ -66,18 +36,6 @@ pub fn Projects() -> impl IntoView {
             description: "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement.",
             technologies: vec!["PowerShell", "Scoop", "Fonts"],
             link: "https://github.com/matthewjberger/scoop-nerd-fonts",
-        },
-        Project {
-            title: "stateless 🦀",
-            description: "A lightweight, zero-cost state machine library that separates structure from behavior. Guards and actions live in wrapper code, not the DSL, enabling zero coupling and complete flexibility.",
-            technologies: vec!["Rust", "Macros", "State Machine", "no_std"],
-            link: "https://github.com/matthewjberger/stateless",
-        },
-        Project {
-            title: "taps 🦀",
-            description: "A Tokio async pub/sub message broker for in-process communication. Enables decoupled component communication with topic-based routing and scalable async architecture.",
-            technologies: vec!["Rust", "Tokio", "Async", "Pub/Sub"],
-            link: "https://github.com/matthewjberger/taps",
         },
         Project {
             title: "superbible 🦀",
