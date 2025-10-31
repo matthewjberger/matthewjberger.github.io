@@ -68,6 +68,12 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/scoop-nerd-fonts",
         },
         Project {
+            title: "stateless 🦀",
+            description: "A lightweight, zero-cost state machine library that separates structure from behavior. Guards and actions live in wrapper code, not the DSL, enabling zero coupling and complete flexibility.",
+            technologies: vec!["Rust", "Macros", "State Machine", "no_std"],
+            link: "https://github.com/matthewjberger/stateless",
+        },
+        Project {
             title: "taps 🦀",
             description: "A Tokio async pub/sub message broker for in-process communication. Enables decoupled component communication with topic-based routing and scalable async architecture.",
             technologies: vec!["Rust", "Tokio", "Async", "Pub/Sub"],
