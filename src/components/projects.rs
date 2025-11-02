@@ -44,12 +44,6 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/superbible",
         },
         Project {
-            title: "obsidian 🦀",
-            description: "A modern game engine written in Rust with modular architecture and high-performance rendering capabilities.",
-            technologies: vec!["Rust", "Game Engine", "ECS"],
-            link: "https://github.com/matthewjberger/obsidian",
-        },
-        Project {
             title: "vulkan-example 🦀",
             description: "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V.",
             technologies: vec!["Rust", "Vulkan", "egui", "GLSL"],
