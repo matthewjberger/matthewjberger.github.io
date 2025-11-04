@@ -25,8 +25,8 @@
   <!-- include support for `wasm-bindgen --weak-refs` - see: https://rustwasm.github.io/docs/wasm-bindgen/reference/weak-references.html -->
   
 <script type="module">
-import init, * as bindings from '/portfolio-3ab221c37ef56666.js';
-const wasm = await init({ module_or_path: '/portfolio-3ab221c37ef56666_bg.wasm' });
+import init, * as bindings from '/portfolio-6ba4a6807cdc61b4.js';
+const wasm = await init({ module_or_path: '/portfolio-6ba4a6807cdc61b4_bg.wasm' });
 
 
 window.wasmBindings = bindings;
@@ -35,7 +35,7 @@ window.wasmBindings = bindings;
 dispatchEvent(new CustomEvent("TrunkApplicationStarted", {detail: {wasm}}));
 
 </script>
-<link rel="modulepreload" href="/portfolio-3ab221c37ef56666.js" crossorigin="anonymous" integrity="sha384-gZucrADUpMOS4dx7PSFkrExi6Op9Aw/iA0w9GkSI5vq8sK2gVbTBkHUbF5LuRpKS"><link rel="modulepreload" href="/snippets/leptos-pdf-84f1830662a46334/bundled_javascript/pdf_glue.bundle.mjs" crossorigin="anonymous" integrity="sha384-TfbbGUxKXi7YrwFctnTMDKsFRaN97kzzMbZb6tFf/eCcVrolMaEQwUBYrssHQNT4"><link rel="preload" href="/portfolio-3ab221c37ef56666_bg.wasm" crossorigin="anonymous" integrity="sha384-bU5a9cUlILnyMTiBH9kQZffjz+00cPWIwJfODCkzrk6GEt/9CtPF0xbtn0xo2FUs" as="fetch" type="application/wasm"></head>
+<link rel="modulepreload" href="/portfolio-6ba4a6807cdc61b4.js" crossorigin="anonymous" integrity="sha384-U1Aw6RPgpaa+oQFK3VfSMTu2Vux3MPhlCU+cVAdAIj5IY4eFlFByzHOylNJSKSV5"><link rel="modulepreload" href="/snippets/leptos-pdf-84f1830662a46334/bundled_javascript/pdf_glue.bundle.mjs" crossorigin="anonymous" integrity="sha384-TfbbGUxKXi7YrwFctnTMDKsFRaN97kzzMbZb6tFf/eCcVrolMaEQwUBYrssHQNT4"><link rel="preload" href="/portfolio-6ba4a6807cdc61b4_bg.wasm" crossorigin="anonymous" integrity="sha384-lJG0378LyaWQ8hLW1i9PXstd45p25fFKpaOYq6Dz8yKFM1nnyYnztgZJ2FnL5yg4" as="fetch" type="application/wasm"></head>
 
 <body></body>
 
