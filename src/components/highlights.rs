@@ -22,7 +22,7 @@ pub fn Highlights() -> impl IntoView {
         Highlight {
             title: "nightshade 🦀",
             description: "Cross-platform GPU-driven graphics framework built with Rust and wgpu for modern rendering pipelines.",
-            link: "https://github.com/matthewjberger/nightshade",
+            link: "https://github.com/matthewjberger/nightshade-experimental",
             demo_link: None,
             image: Some("/nightshade.png"),
         },
