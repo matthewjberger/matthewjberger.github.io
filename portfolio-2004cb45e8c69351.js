@@ -218,14 +218,14 @@ function makeMutClosure(arg0, arg1, dtor, f) {
     return real;
 }
 function __wbg_adapter_8(arg0, arg1) {
-    wasm.wasm_bindgen__convert__closures_____invoke__hefffdea4c6879817(arg0, arg1);
+    wasm.wasm_bindgen__convert__closures_____invoke__h1bb7db051f3267cd(arg0, arg1);
 }
 
 function __wbg_adapter_11(arg0, arg1, arg2) {
     wasm.closure10_externref_shim(arg0, arg1, arg2);
 }
 
-function __wbg_adapter_62(arg0, arg1, arg2, arg3) {
+function __wbg_adapter_58(arg0, arg1, arg2, arg3) {
     wasm.closure70_externref_shim(arg0, arg1, arg2, arg3);
 }
 
@@ -716,7 +716,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_62(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_58(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
