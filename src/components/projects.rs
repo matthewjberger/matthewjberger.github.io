@@ -49,6 +49,12 @@ pub fn Projects() -> impl IntoView {
             technologies: vec!["Rust", "Vulkan", "egui", "GLSL"],
             link: "https://github.com/matthewjberger/vulkan-example",
         },
+        Project {
+            title: "opengl-example 🦀",
+            description: "A minimal example demonstrating Rust, OpenGL, and egui integration. Features a spinning triangle rendered with OpenGL via gl-rs and glutin.",
+            technologies: vec!["Rust", "OpenGL", "egui", "GLSL"],
+            link: "https://github.com/matthewjberger/opengl-example",
+        },
     ];
 
     let sorted_projects = move || {
