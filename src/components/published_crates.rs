@@ -56,6 +56,18 @@ pub fn PublishedCrates() -> impl IntoView {
             link: "https://github.com/matthewjberger/freecs",
         },
         Crate {
+            title: "nightshade 🦀",
+            description: "A cross-platform graphics framework built with Rust and wgpu.",
+            technologies: vec!["Rust", "wgpu", "Graphics"],
+            link: "https://github.com/matthewjberger/nightshade",
+        },
+        Crate {
+            title: "nightshade-editor 🦀",
+            description: "Visual editor for the nightshade graphics framework with scene editing and asset management capabilities.",
+            technologies: vec!["Rust", "wgpu", "egui", "Graphics"],
+            link: "https://github.com/matthewjberger/nightshade",
+        },
+        Crate {
             title: "stateless 🦀",
             description: "A lightweight, zero-cost state machine library that separates structure from behavior. Guards and actions live in wrapper code, not the DSL, enabling zero coupling and complete flexibility.",
             technologies: vec!["Rust", "Macros", "State Machine", "no_std"],

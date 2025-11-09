@@ -13,34 +13,6 @@ struct Highlight {
 pub fn Highlights() -> impl IntoView {
     let mut highlights = vec![
         Highlight {
-            title: "dragonglass 🦀",
-            description: "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor.",
-            link: "https://github.com/matthewjberger/dragonglass",
-            demo_link: None,
-            image: Some("/dragonglass.png"),
-        },
-        Highlight {
-            title: "nightshade 🦀",
-            description: "Cross-platform GPU-driven graphics framework built with Rust and wgpu for modern rendering pipelines.",
-            link: "https://github.com/matthewjberger/nightshade-experimental",
-            demo_link: None,
-            image: Some("/nightshade.png"),
-        },
-        Highlight {
-            title: "nightshade-viewer 🦀",
-            description: "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments.",
-            link: "https://github.com/matthewjberger/nightshade-viewer",
-            demo_link: Some("https://matthewberger.dev/nightshade-viewer"),
-            image: Some("/nightshade-viewer.png"),
-        },
-        Highlight {
-            title: "wgpu-rendergraph 🦀",
-            description: "Modern render graph implementation using wgpu with optimized resource management.",
-            link: "https://github.com/matthewjberger/wgpu-rendergraph",
-            demo_link: Some("https://matthewberger.dev/wgpu-rendergraph/"),
-            image: Some("/rendergraph.png"),
-        },
-        Highlight {
             title: "freecs 🦀",
             description: "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code.",
             link: "https://github.com/matthewjberger/freecs",
@@ -48,11 +20,11 @@ pub fn Highlights() -> impl IntoView {
             image: Some("/freecs.png"),
         },
         Highlight {
-            title: "wgpu-example 🦀",
-            description: "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
-            link: "https://github.com/matthewjberger/wgpu-example",
-            demo_link: Some("https://matthewberger.dev/wgpu-example/"),
-            image: Some("/wgpu-example.png"),
+            title: "nightshade 🦀",
+            description: "A cross-platform graphics framework built with Rust and wgpu.",
+            link: "https://github.com/matthewjberger/nightshade",
+            demo_link: Some("https://matthewberger.dev/nightshade"),
+            image: Some("/nightshade.png"),
         },
     ];
 
@@ -107,7 +79,7 @@ pub fn Highlights() -> impl IntoView {
                                                         on:click=move |e| e.stop_propagation()
                                                         class="block px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition-colors text-center font-medium"
                                                     >
-                                                        "Live Demo (Desktop Browser)"
+                                                        "View Live Demos"
                                                     </a>
                                                 </div>
                                             }

@@ -20,6 +20,12 @@ pub fn Projects() -> impl IntoView {
 
     let projects = vec![
         Project {
+            title: "dragonglass 🦀",
+            description: "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor.",
+            technologies: vec!["Rust", "Vulkan", "Graphics"],
+            link: "https://github.com/matthewjberger/dragonglass",
+        },
+        Project {
             title: "eager",
             description: "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment.",
             technologies: vec!["C++", "Ogre3D", "CMake"],
@@ -30,6 +36,18 @@ pub fn Projects() -> impl IntoView {
             description: "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations.",
             technologies: vec!["Rust", "Interpreter", "REPL"],
             link: "https://github.com/matthewjberger/frost",
+        },
+        Project {
+            title: "nightshade-viewer 🦀",
+            description: "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments.",
+            technologies: vec!["Rust", "wgpu", "Graphics"],
+            link: "https://github.com/matthewjberger/nightshade-viewer",
+        },
+        Project {
+            title: "opengl-example 🦀",
+            description: "A minimal example demonstrating Rust, OpenGL, and egui integration. Features a spinning triangle rendered with OpenGL via gl-rs and glutin.",
+            technologies: vec!["Rust", "OpenGL", "egui", "GLSL"],
+            link: "https://github.com/matthewjberger/opengl-example",
         },
         Project {
             title: "scoop-nerd-fonts",
@@ -50,10 +68,16 @@ pub fn Projects() -> impl IntoView {
             link: "https://github.com/matthewjberger/vulkan-example",
         },
         Project {
-            title: "opengl-example 🦀",
-            description: "A minimal example demonstrating Rust, OpenGL, and egui integration. Features a spinning triangle rendered with OpenGL via gl-rs and glutin.",
-            technologies: vec!["Rust", "OpenGL", "egui", "GLSL"],
-            link: "https://github.com/matthewjberger/opengl-example",
+            title: "wgpu-example 🦀",
+            description: "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends.",
+            technologies: vec!["Rust", "wgpu", "egui", "WebAssembly"],
+            link: "https://github.com/matthewjberger/wgpu-example",
+        },
+        Project {
+            title: "wgpu-rendergraph 🦀",
+            description: "Modern render graph implementation using wgpu with optimized resource management.",
+            technologies: vec!["Rust", "wgpu", "Graphics"],
+            link: "https://github.com/matthewjberger/wgpu-rendergraph",
         },
     ];
 
