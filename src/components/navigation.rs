@@ -49,6 +49,16 @@ pub fn Navigation() -> impl IntoView {
                                 {articles_link.0}
                             </a>
                             <a
+                                href="https://github.com/sponsors/matthewjberger"
+                                target="_blank"
+                                class="px-4 py-2 bg-pink-500 text-white rounded-lg hover:bg-pink-600 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                            >
+                                <svg xmlns="http://www.w3.org/2000/svg" class="flex-shrink-0" style="width: 14px; height: 14px;" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                                </svg>
+                                "Sponsor"
+                            </a>
+                            <a
                                 href=github_link
                                 target="_blank"
                                 class="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors p-2"
@@ -110,6 +120,17 @@ pub fn Navigation() -> impl IntoView {
                             class="block py-2 text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 transition-colors"
                         >
                             {articles_link.0}
+                        </a>
+                        <a
+                            href="https://github.com/sponsors/matthewjberger"
+                            target="_blank"
+                            on:click=move |_| set_mobile_menu_open.set(false)
+                            class="flex items-center gap-2 py-2 text-pink-500 dark:text-pink-400 hover:text-pink-600 dark:hover:text-pink-300 transition-colors"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>"Sponsor"</span>
                         </a>
                         <a
                             href=github_link
