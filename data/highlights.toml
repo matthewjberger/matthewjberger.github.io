@@ -1,0 +1,13 @@
+[[items]]
+title = "freecs 🦀"
+description = "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code."
+link = "https://github.com/matthewjberger/freecs"
+image = "/freecs.png"
+
+[[items]]
+title = "nightshade 🦀"
+description = "A cross-platform graphics framework built with Rust and wgpu."
+link = "https://github.com/matthewjberger/nightshade"
+image = "/nightshade.png"
+demo_link = "https://matthewberger.dev/nightshade"
+demo_label = "View Live Demos"

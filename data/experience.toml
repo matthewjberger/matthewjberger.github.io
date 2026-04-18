@@ -1,0 +1,65 @@
+[[jobs]]
+title = "Staff Software Engineer (Founding Engineer)"
+company = "Hyphen Robotics"
+period = "Sep 2022 - Present"
+achievements = [
+    "Founded food assembly robotics controls suite as first engineer, driving technical pivot from PLC to Rust architecture",
+    "Achieved complete product delivery in 22 months, securing $10M+ investment from Chipotle and Cava",
+    "Engineered full technology stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system and cloud infrastructure, including custom Yocto Linux distribution",
+    "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, capable of handling 1M+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
+    "Transformed team of web developers into proficient Rust systems programmers through hands-on mentorship, establishing architectural patterns, and pair programming",
+    "Designed deterministic layered configuration system enabling unlimited fleet scaling",
+    "Created Hyphen Explorer tool achieving 100% adoption across all software engineers, ops technicians, and culinary operators for real-time IPC visualization, debugging, and system control",
+    "Published open-source Rust crates (enum2contract, enum2egui, enum2str, enum2pos, enum2repr) extending language capabilities for robotics",
+]
+
+[[jobs]]
+title = "Senior Software Engineer"
+company = "Hyphen Robotics"
+period = "Jul 2021 - Sep 2022"
+achievements = [
+    "Hired to extend initial PLC-based system, identified scaling limitations that would prevent growth beyond prototype stage",
+    "Led complete architectural pivot to embedded Rust, convincing leadership to abandon PLC approach for scalable alternative",
+    "Pioneered RP2040 firmware with Embassy-rs, creating first Rust TMC5160 motor and AS5048A encoder drivers proving Rust could meet real-time control loop requirements",
+    "Built initial AWS cloud infrastructure with Pulumi infrastructure and greengrass IoT",
+    "Established foundation for Gen2 platform that would become company's core product and competitive advantage",
+]
+
+[[jobs]]
+title = "Software Engineer III"
+company = "Sierra Nevada Corporation"
+period = "May 2020 - Jul 2021"
+achievements = [
+    "Developed robust aerospace imaging software capable of collecting and orthorectifying gigabytes of pixel data per second during a flight",
+    "Built asynchronous Rust simulator for unavailable flight hardware, saving months on project timeline",
+]
+
+[[jobs]]
+title = "Software Engineer"
+company = "Scientific Games"
+period = "Jul 2019 - May 2020"
+achievements = [
+    "Improved game engine stability by resolving critical performance and rendering defects in Unity-based casino-gaming platform",
+]
+
+[[jobs]]
+title = "Software Engineer"
+company = "Hamilton Company"
+period = "Jan 2018 - Jul 2019"
+achievements = [
+    "Designed and built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots",
+    "Reduced development time for new calibration routines from two months to less than two weeks by consolidating multiple applications into a single GUI and reusable-plugin framework",
+    "Decreased development environment setup from a day to a few clicks by creating a bootstrapper that installs dependencies and configures settings on a Windows virtual machine",
+    "Worked directly with Hamilton's largest OEM customer to architect an application that commands the firmware in their robots for rapidly diagnosing and resolving mechanical issues",
+    "Mentored new hires and interns on team processes and coding practices",
+]
+
+[[jobs]]
+title = "Software Engineering Intern"
+company = "Hamilton Company"
+period = "Oct 2014 - Dec 2017"
+achievements = [
+    "Decreased time spent quality testing robots by more than a week per robot by automating the process of gravimetric analysis",
+    "Saved developers hours of time per day on common tasks by creating a suite of in-house tools",
+    "Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through collaboration with third-party device manufacturers",
+]

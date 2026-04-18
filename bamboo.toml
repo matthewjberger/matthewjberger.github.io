@@ -1,0 +1,17 @@
+title = "Matthew Berger 🦀"
+base_url = "https://matthewberger.dev"
+description = "Staff Software Engineer (Founding Engineer) at Hyphen Robotics. Building food assembly robotics with Rust."
+author = "Matthew J. Berger"
+language = "en"
+link_check_ignore = ["/nightshade", "/articles"]
+
+[extra]
+avatar = "/bio-photo.jpg"
+tagline = "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
+github = "https://github.com/matthewjberger"
+linkedin = "https://www.linkedin.com/in/matthewjberger/"
+articles_url = "https://matthewberger.dev/articles"
+sponsor_url = "https://github.com/sponsors/matthewjberger"
+source_url = "https://github.com/matthewjberger/matthewjberger.github.io"
+hero_pdf = "/Resume.pdf"
+hero_pdf_label = "Resume"

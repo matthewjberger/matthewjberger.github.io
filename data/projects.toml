@@ -1,0 +1,59 @@
+[[items]]
+title = "dragonglass 🦀"
+description = "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor."
+link = "https://github.com/matthewjberger/dragonglass"
+technologies = ["Rust", "Vulkan", "Graphics"]
+
+[[items]]
+title = "eager"
+description = "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment."
+link = "https://github.com/matthewjberger/eager"
+technologies = ["C++", "Ogre3D", "CMake"]
+
+[[items]]
+title = "frost 🦀"
+description = "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations."
+link = "https://github.com/matthewjberger/frost"
+technologies = ["Rust", "Interpreter", "REPL"]
+
+[[items]]
+title = "nightshade-viewer 🦀"
+description = "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments."
+link = "https://github.com/matthewjberger/nightshade-viewer"
+technologies = ["Rust", "wgpu", "Graphics"]
+
+[[items]]
+title = "opengl-example 🦀"
+description = "A minimal example demonstrating Rust, OpenGL, and egui integration. Features a spinning triangle rendered with OpenGL via gl-rs and glutin."
+link = "https://github.com/matthewjberger/opengl-example"
+technologies = ["Rust", "OpenGL", "egui", "GLSL"]
+
+[[items]]
+title = "scoop-nerd-fonts"
+description = "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement."
+link = "https://github.com/matthewjberger/scoop-nerd-fonts"
+technologies = ["PowerShell", "Scoop", "Fonts"]
+
+[[items]]
+title = "superbible 🦀"
+description = "Rust implementations of OpenGL examples from the OpenGL Superbible 7th edition. Features advanced shader techniques, texture mapping, 3D transformations, and lighting models."
+link = "https://github.com/matthewjberger/superbible"
+technologies = ["Rust", "OpenGL", "GLSL"]
+
+[[items]]
+title = "vulkan-example 🦀"
+description = "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V."
+link = "https://github.com/matthewjberger/vulkan-example"
+technologies = ["Rust", "Vulkan", "egui", "GLSL"]
+
+[[items]]
+title = "wgpu-example 🦀"
+description = "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends."
+link = "https://github.com/matthewjberger/wgpu-example"
+technologies = ["Rust", "wgpu", "egui", "WebAssembly"]
+
+[[items]]
+title = "wgpu-rendergraph 🦀"
+description = "Modern render graph implementation using wgpu with optimized resource management."
+link = "https://github.com/matthewjberger/wgpu-rendergraph"
+technologies = ["Rust", "wgpu", "Graphics"]

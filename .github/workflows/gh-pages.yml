@@ -1,4 +1,4 @@
-name: Release to Github Pages
+name: Deploy to GitHub Pages
 
 on:
   push:
@@ -6,73 +6,58 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  BAMBOO_CLI_VERSION: "0.3.7"
+
 jobs:
-  Github-Pages-Release:
-
-    timeout-minutes: 15
-
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
 
-      - name: Install nightly Rust
-        uses: dtolnay/rust-toolchain@nightly
-        with:
-          components: clippy, rustfmt
-
-      - name: Add WASM target
-        run: rustup target add wasm32-unknown-unknown
-
-      - name: Cache Rust dependencies
+      - name: Cache Cargo
         uses: Swatinem/rust-cache@v2
+
+      - name: Cache bamboo-cli binary
+        id: cache-bamboo
+        uses: actions/cache@v5
         with:
-          cache-on-failure: true
+          path: ~/.cargo/bin/bamboo
+          key: bamboo-cli-${{ runner.os }}-${{ env.BAMBOO_CLI_VERSION }}
 
-      - name: Cache Trunk binary
-        id: cache-trunk
-        uses: actions/cache@v4
+      - name: Install bamboo-cli
+        if: steps.cache-bamboo.outputs.cache-hit != 'true'
+        run: cargo install bamboo-cli --version "${{ env.BAMBOO_CLI_VERSION }}" --locked
+
+      - name: Build site
+        run: bamboo build --output dist --base-url "https://matthewberger.dev"
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v6
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v5
         with:
-          path: ~/.cargo/bin/trunk
-          key: trunk-${{ runner.os }}-v0.21.14
+          path: dist
 
-      - name: Download and install Trunk binary
-        if: steps.cache-trunk.outputs.cache-hit != 'true'
-        run: wget -qO- https://github.com/trunk-rs/trunk/releases/download/v0.21.14/trunk-x86_64-unknown-linux-gnu.tar.gz | tar -xzf- && mv trunk ~/.cargo/bin/
-
-      - name: lint
-        run: cargo clippy -- -D warnings && cargo fmt --check
-
-      - name: Cache npm dependencies
-        uses: actions/cache@v4
-        with:
-          path: ~/.npm
-          key: npm-${{ runner.os }}-${{ hashFiles('package.json') }}
-          restore-keys: npm-${{ runner.os }}-
-
-      - name: Install npm dependencies
-        run: npm install
-
-      - name: Build Tailwind CSS
-        run: npx tailwindcss -i ./input.css -o ./public/styles.css --minify
-
-      - name: Build with Trunk
-        # Using --public-url / since we're using a custom domain (matthewberger.dev)
-        # which serves from the root path, not from a subdirectory
-        run: trunk build --release --public-url /
-
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: dist
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

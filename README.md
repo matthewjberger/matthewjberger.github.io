@@ -1,99 +1,43 @@
 # Portfolio
 
-A modern portfolio website built with Rust and WebAssembly, featuring client-side rendering with Leptos and styled with Tailwind CSS.
-
-## Tech Stack
-
-- **[Leptos](https://github.com/leptos-rs/leptos)** - Reactive web framework for Rust
-- **[Trunk](https://github.com/trunk-rs/trunk)** - WASM web application bundler
-- **[Tailwind CSS](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Just](https://github.com/casey/just)** - Command runner for project tasks
+Personal portfolio site at [matthewberger.dev](https://matthewberger.dev), built with [bamboo](https://github.com/matthewjberger/bamboo), a static site generator written in Rust.
 
 ## Prerequisites
 
-- Rust nightly toolchain
-- Node.js and npm
-- Just command runner
-- Trunk bundler
-
-### Installation
-
-Install Rust nightly and add the WASM target:
-
 ```sh
-rustup toolchain install nightly --allow-downgrade
-rustup target add wasm32-unknown-unknown
-```
-
-Install Trunk:
-
-```sh
-cargo install trunk
-```
-
-Install Just:
-
-```sh
+cargo install bamboo-cli
 cargo install just
-```
-
-Install npm dependencies:
-
-```sh
-npm install
 ```
 
 ## Development
 
-Start the development server:
-
 ```sh
-just serve
+just serve   # live-reload server at http://localhost:3000
+just build   # one-shot build to dist/
 ```
 
-This will build Tailwind CSS and start the Trunk dev server at `http://localhost:3000`.
-
-To watch Tailwind CSS for changes in a separate terminal:
-
-```sh
-just tailwind-watch
-```
-
-## Building
-
-Build for production:
-
-```sh
-just build
-```
-
-This builds the optimized WASM bundle and Tailwind CSS to the `dist` directory.
-
-## Deployment
-
-The project automatically deploys to GitHub Pages via GitHub Actions when pushing to the main branch. The workflow:
-
-1. Runs linting (clippy and rustfmt)
-2. Builds Tailwind CSS
-3. Builds the WASM application with Trunk
-4. Deploys to the gh-pages branch
-
-## Project Structure
+## Structure
 
 ```
 .
-├── src/
-│   ├── components/     # Reusable UI components
-│   ├── pages/          # Page components (home, not_found)
-│   └── lib.rs          # App entry point and router
-├── public/             # Static assets
-├── input.css           # Tailwind CSS input
-├── index.html          # HTML template
-├── Trunk.toml          # Trunk configuration
-├── tailwind.config.js  # Tailwind configuration
-└── justfile            # Task definitions
+├── bamboo.toml             # Site config + [extra] fields consumed by portfolio template
+├── content/
+│   ├── _index.md           # Home (About) copy + template selection
+│   └── projects/           # One markdown file per project
+├── data/                   # TOML data files consumed by the portfolio template
+│   ├── experience.toml
+│   ├── education.toml
+│   ├── highlights.toml
+│   └── crates.toml
+└── static/                 # Copied verbatim to the output root (Resume.pdf, images, CNAME, favicon)
 ```
+
+All content lives in `content/` and `data/`. The layout, interactivity, and styling come from bamboo's built-in `portfolio.html` template.
+
+## Deployment
+
+GitHub Actions (`.github/workflows/gh-pages.yml`) installs `bamboo-cli`, builds the site with `--base-url "https://matthewberger.dev"`, and publishes to GitHub Pages on every push to `main`.
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+MIT. See [LICENSE.md](LICENSE.md).

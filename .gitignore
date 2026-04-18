@@ -1,5 +1,2 @@
-/target
 /dist
-/public/styles.css
-/node_modules
-package-lock.json
+.bamboo-cache/

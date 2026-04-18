@@ -2,35 +2,18 @@
 @just:
     just --list
 
-# Installs npm dependencies
-install:
-    npm install
+# Serves the site locally with live reload at http://localhost:3000
+serve:
+    bamboo serve --open
 
-# Builds Tailwind CSS styles
-tailwind: install
-    npx tailwindcss -i ./input.css -o ./public/styles.css --minify
+# Builds the site to dist/
+build:
+    bamboo build
 
-# Watches for changes and rebuilds Tailwind CSS styles
-tailwind-watch:
-    npx tailwindcss -i ./input.css -o ./public/styles.css --watch
+# Builds the site for the matthewberger.dev deployment
+build-release:
+    bamboo build --base-url "https://matthewberger.dev"
 
-# Serves the application locally on port 3000
-serve: tailwind
-    trunk serve --port 3000 --open
-
-# Builds the project for release
-build: tailwind
-    trunk build --release
-
-# Runs cargo check and format check
-check:
-    cargo check --all --tests
-    cargo fmt --all -- --check
-
-# Formats the code using cargo fmt
-format:
-    cargo fmt
-
-# Runs linter and displays warnings
-lint:
-    cargo clippy --all --tests -- -D warnings
+# Removes the build output and incremental cache
+clean:
+    rm -rf dist .bamboo-cache
