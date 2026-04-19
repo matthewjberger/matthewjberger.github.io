@@ -1,4 +1,16 @@
 [[items]]
+title = "bamboo 🦀"
+description = "A fast static site generator written in Rust. Powers this site and the articles blog."
+link = "https://github.com/matthewjberger/bamboo"
+technologies = ["Rust", "Static Site", "Tera"]
+
+[[items]]
+title = "cameras 🦀"
+description = "A cross-platform camera library for Rust. Ships as a workspace with dioxus-cameras and egui-cameras adapters."
+link = "https://github.com/matthewjberger/cameras"
+technologies = ["Rust", "Dioxus", "egui"]
+
+[[items]]
 title = "dragonglass 🦀"
 description = "A 3D graphics engine built with Rust and Vulkan, featuring PBR rendering, 3D object picking, and a visual editor."
 link = "https://github.com/matthewjberger/dragonglass"
@@ -33,6 +45,12 @@ title = "scoop-nerd-fonts"
 description = "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement."
 link = "https://github.com/matthewjberger/scoop-nerd-fonts"
 technologies = ["PowerShell", "Scoop", "Fonts"]
+
+[[items]]
+title = "stateless 🦀"
+description = "A state machine library with a DSL that separates state from behavior, for writing clear finite state machines in Rust."
+link = "https://github.com/matthewjberger/stateless"
+technologies = ["Rust", "State Machine", "DSL"]
 
 [[items]]
 title = "superbible 🦀"
