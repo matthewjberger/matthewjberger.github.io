@@ -1,4 +1,16 @@
 [[items]]
+title = "nightshade 🦀"
+description = "Data-oriented Rust game engine featuring custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
+link = "https://github.com/matthewjberger/nightshade"
+technologies = ["Rust", "wgpu", "ECS", "WebGPU"]
+
+[[items]]
+title = "freecs 🦀"
+description = "Archetype-based ECS in Rust with zero unsafe code, Rayon-parallel system execution, sparse-set tags, deferred command buffers, and watermark change detection. The entire ECS is generated at compile time via a declarative macro. 48k+ downloads on crates.io."
+link = "https://github.com/matthewjberger/freecs"
+technologies = ["Rust", "ECS", "Macros", "Rayon"]
+
+[[items]]
 title = "bamboo 🦀"
 description = "A fast static site generator written in Rust. Powers this site and the articles blog."
 link = "https://github.com/matthewjberger/bamboo"
@@ -6,9 +18,21 @@ technologies = ["Rust", "Static Site", "Tera"]
 
 [[items]]
 title = "cameras 🦀"
-description = "A cross-platform camera library for Rust. Ships as a workspace with dioxus-cameras and egui-cameras adapters."
+description = "A cross-platform Rust camera library with data-oriented design (explicit format negotiation, push-based frame delivery, zero trait objects). Ships with Dioxus and egui integrations."
 link = "https://github.com/matthewjberger/cameras"
 technologies = ["Rust", "Dioxus", "egui"]
+
+[[items]]
+title = "charter 🦀"
+description = "Fast structural context generator for Rust codebases, optimized for LLM consumption. Walks crates and emits compact summaries suitable for AI tooling."
+link = "https://github.com/matthewjberger/charter"
+technologies = ["Rust", "CLI", "LLM"]
+
+[[items]]
+title = "clippr 🦀"
+description = "Convert MP4 to chunked GitHub-friendly GIFs. CLI tool for sharing video clips in markdown."
+link = "https://github.com/matthewjberger/clippr"
+technologies = ["Rust", "CLI", "Video"]
 
 [[items]]
 title = "dragonglass 🦀"
@@ -17,34 +41,28 @@ link = "https://github.com/matthewjberger/dragonglass"
 technologies = ["Rust", "Vulkan", "Graphics"]
 
 [[items]]
-title = "eager"
-description = "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment."
-link = "https://github.com/matthewjberger/eager"
-technologies = ["C++", "Ogre3D", "CMake"]
-
-[[items]]
 title = "frost 🦀"
-description = "A small interpreted programming language built in Rust with full unit tests. Features a REPL interface, recursive functions, conditional logic, and arithmetic operations."
+description = "A statically-typed programming language with Odin-style syntax and Rust-inspired ownership. Dual backend: bytecode VM for development, Cranelift for production."
 link = "https://github.com/matthewjberger/frost"
-technologies = ["Rust", "Interpreter", "REPL"]
+technologies = ["Rust", "Compiler", "Cranelift"]
 
 [[items]]
-title = "nightshade-viewer 🦀"
-description = "A portable graphics engine written in Rust with cross-platform support for desktop, web, and server environments."
-link = "https://github.com/matthewjberger/nightshade-viewer"
-technologies = ["Rust", "wgpu", "Graphics"]
+title = "wgpu-example 🦀"
+description = "A minimal example of using Rust, wgpu, and egui without eframe. Shows how to build graphics that run everywhere: native desktop, WebGPU/WebGL via WebAssembly, Android, Steam Deck, and OpenXR VR with hand tracking."
+link = "https://github.com/matthewjberger/wgpu-example"
+technologies = ["Rust", "wgpu", "egui", "WebAssembly", "OpenXR"]
+
+[[items]]
+title = "vulkan-example 🦀"
+description = "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V."
+link = "https://github.com/matthewjberger/vulkan-example"
+technologies = ["Rust", "Vulkan", "egui", "GLSL"]
 
 [[items]]
 title = "opengl-example 🦀"
 description = "A minimal example demonstrating Rust, OpenGL, and egui integration. Features a spinning triangle rendered with OpenGL via gl-rs and glutin."
 link = "https://github.com/matthewjberger/opengl-example"
 technologies = ["Rust", "OpenGL", "egui", "GLSL"]
-
-[[items]]
-title = "scoop-nerd-fonts"
-description = "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement."
-link = "https://github.com/matthewjberger/scoop-nerd-fonts"
-technologies = ["PowerShell", "Scoop", "Fonts"]
 
 [[items]]
 title = "stateless 🦀"
@@ -59,19 +77,13 @@ link = "https://github.com/matthewjberger/superbible"
 technologies = ["Rust", "OpenGL", "GLSL"]
 
 [[items]]
-title = "vulkan-example 🦀"
-description = "A minimal example of using Rust, Vulkan, and egui together without eframe. Features Vulkan 1.3 with dynamic rendering and GLSL shader compilation to SPIR-V."
-link = "https://github.com/matthewjberger/vulkan-example"
-technologies = ["Rust", "Vulkan", "egui", "GLSL"]
+title = "eager"
+description = "An Ogre3D 1.9 and C++ project template using CMake for quick setup. Features multi-platform support, optional Bullet Physics integration, and Vagrant development environment."
+link = "https://github.com/matthewjberger/eager"
+technologies = ["C++", "Ogre3D", "CMake"]
 
 [[items]]
-title = "wgpu-example 🦀"
-description = "A minimal example of using Rust, wgpu, and egui without eframe. Cross-platform support for native and WebAssembly with WebGL and WebGPU backends."
-link = "https://github.com/matthewjberger/wgpu-example"
-technologies = ["Rust", "wgpu", "egui", "WebAssembly"]
-
-[[items]]
-title = "wgpu-rendergraph 🦀"
-description = "Modern render graph implementation using wgpu with optimized resource management."
-link = "https://github.com/matthewjberger/wgpu-rendergraph"
-technologies = ["Rust", "wgpu", "Graphics"]
+title = "scoop-nerd-fonts"
+description = "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement."
+link = "https://github.com/matthewjberger/scoop-nerd-fonts"
+technologies = ["PowerShell", "Scoop", "Fonts"]

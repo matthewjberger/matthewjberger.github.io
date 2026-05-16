@@ -1,13 +1,13 @@
 title = "Matthew Berger 🦀"
 base_url = "https://matthewberger.dev"
-description = "Staff Software Engineer (Founding Engineer) at Hyphen Robotics. Building food assembly robotics with Rust."
+description = "Senior Staff Rust engineer and founding engineer with 10+ years writing Rust (including pre-1.0). Built food assembly robotics from zero to production at Hyphen Robotics."
 author = "Matthew J. Berger"
 language = "en"
 link_check_ignore = ["/nightshade", "/articles"]
 
 [extra]
 avatar = "/bio-photo.jpg"
-tagline = "Staff Software Engineer (Founding Engineer) at Hyphen Robotics"
+tagline = "Senior Staff Rust engineer • Founding engineer at Hyphen Robotics (2021-2026)"
 github = "https://github.com/matthewjberger"
 linkedin = "https://www.linkedin.com/in/matthewjberger/"
 articles_url = "https://matthewberger.dev/articles"

@@ -32,19 +32,19 @@ technologies = ["Rust", "Macros", "no_std"]
 
 [[items]]
 title = "freecs 🦀"
-description = "A high-performance Entity Component System library in ~1,350 lines of Rust. Features zero-cost abstractions, multi-threaded processing with Rayon, and no unsafe code."
+description = "Archetype-based Entity Component System in Rust with zero unsafe code, Rayon-parallel system execution, sparse-set tags, deferred command buffers, and watermark change detection. The entire ECS is generated at compile time via a declarative macro. 48k+ downloads on crates.io."
 link = "https://github.com/matthewjberger/freecs"
-technologies = ["Rust", "ECS"]
+technologies = ["Rust", "ECS", "Macros", "Rayon"]
 
 [[items]]
 title = "nightshade 🦀"
-description = "A cross-platform graphics framework built with Rust and wgpu."
+description = "Data-oriented Rust game engine featuring a custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
 link = "https://github.com/matthewjberger/nightshade"
-technologies = ["Rust", "wgpu", "Graphics"]
+technologies = ["Rust", "wgpu", "WebGPU", "Graphics"]
 
 [[items]]
 title = "nightshade-editor 🦀"
-description = "Visual editor for the nightshade graphics framework with scene editing and asset management capabilities."
+description = "Visual editor for the nightshade game engine with scene editing and asset management capabilities."
 link = "https://github.com/matthewjberger/nightshade"
 technologies = ["Rust", "wgpu", "egui", "Graphics"]
 

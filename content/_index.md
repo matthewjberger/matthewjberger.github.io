@@ -3,6 +3,6 @@ title = "Matthew Berger"
 template = "portfolio.html"
 +++
 
-A passionate software architect automating the food industry with Rust 🦀🤖🥗
+Senior Staff Rust engineer with 10+ years writing Rust (including pre-1.0). Specializing in robotics, embedded systems, and graphics.
 
-Founding engineer with 11 years Rust experience (pre-1.0 early adopter), 5+ years in production systems. Built food assembly robotics controls suite from zero in 22 months, securing $10M+ investment from Chipotle and Cava.
+Founding engineer at Hyphen Robotics (2021-2026), where I built the food assembly robotics controls suite from zero to production in 22 months, anchoring $50M+ in combined investment from Chipotle and Cava.
