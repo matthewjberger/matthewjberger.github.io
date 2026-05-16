@@ -19,6 +19,12 @@ link = "https://github.com/matthewjberger/charter"
 technologies = ["Rust", "MCP", "tree-sitter", "LLM"]
 
 [[items]]
+title = "dhcplease 🦀"
+description = "A cross-platform DHCP server library and CLI. Full protocol implementation (DISCOVER/OFFER/REQUEST/ACK/NAK/RELEASE/DECLINE/INFORM), Option 61 client identifiers, Option 82 relay-agent echo, static MAC→IP bindings, persisted leases, concurrent packet handling with rate limiting. Async Tokio. Runs natively on Windows, including interface binding — a rarity for open-source DHCP servers."
+link = "https://github.com/matthewjberger/dhcplease"
+technologies = ["Rust", "Tokio", "DHCP", "Networking"]
+
+[[items]]
 title = "egui-thematic 🦀"
 description = "A theme editor and configuration system for egui applications with full control over 73 visual properties, live preview window, 9 built-in presets (Dracula, Nord, Gruvbox, Solarized, Tokyo Night, etc.), random theme generation, JSON/Rust code export, and persistence."
 link = "https://github.com/matthewjberger/egui-thematic"
