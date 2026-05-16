@@ -1,12 +1,12 @@
 [[jobs]]
-title = "Staff Software Engineer (Founding Engineer) → Senior Staff Software Engineer"
+title = "Staff → Senior Staff Software Engineer (Founding Engineer)"
 company = "Hyphen Robotics"
 period = "Sep 2022 - May 2026"
 achievements = [
     "Sole architect of the production food assembly robotics controls suite; merged 1,000+ pull requests over 4 years across firmware, controls, IPC, and cloud infrastructure",
     "Engineered full technology stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system, custom Yocto Linux distribution, and AWS cloud",
     "Built core async message broker coordinating distributed processes on industrial PC with direct networking to embedded boards, handling 1M+ msgs/sec with <1ms latency, zero message loss over 3 years of constant use",
-    "Created Hyphen Explorer tool for real-time IPC visualization, debugging, and system control, achieving 100% adoption across all software engineers, ops technicians, and culinary operators",
+    "Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100% adoption across all Hyphen engineers",
     "Shipped Hyphen Studio, a Dioxus desktop application enabling operators to configure makeline layouts and parameters directly",
     "Replaced TypeScript/GraphQL tablet portal with a pure Rust Leptos rewrite connecting directly to the IPC broker, eliminating an entire backend tier",
     "Mentored team of web developers into Rust systems programmers through architectural review, pair programming, and codified patterns",
