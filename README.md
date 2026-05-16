@@ -34,6 +34,21 @@ just build   # one-shot build to dist/
 
 All content lives in `content/` and `data/`. The layout, interactivity, and styling come from bamboo's built-in `portfolio.html` template.
 
+## Resume
+
+`resume.tex` is the source for `static/Resume.pdf`. Rebuild it with `pdflatex`:
+
+```sh
+pdflatex resume.tex
+mv resume.pdf static/Resume.pdf
+```
+
+Install `pdflatex` via:
+
+- **Windows**: `scoop install miktex` (from [scoop.sh](https://scoop.sh))
+- **macOS**: `brew install --cask mactex-no-gui`
+- **Linux**: `sudo apt install texlive-latex-base` (Debian/Ubuntu) or equivalent
+
 ## Deployment
 
 GitHub Actions (`.github/workflows/gh-pages.yml`) installs `bamboo-cli`, builds the site with `--base-url "https://matthewberger.dev"`, and publishes to GitHub Pages on every push to `main`.
