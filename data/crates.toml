@@ -1,6 +1,30 @@
 title = "Published Crates"
 
 [[items]]
+title = "bamboo-ssg 🦀"
+description = "A fast static site generator written in Rust. Markdown + Tera templates, syntect-highlighted code blocks with copy/line-numbers toolbar, live-reload dev server with incremental builds, RSS/Atom/sitemap, Sass, responsive images, and an embedded default theme. Powers this site and matthewberger.dev/articles."
+link = "https://github.com/matthewjberger/bamboo"
+technologies = ["Rust", "Static Site", "Tera", "syntect"]
+
+[[items]]
+title = "cameras 🦀"
+description = "A cross-platform camera library for Rust with data-oriented design: explicit format negotiation, push-based frame delivery, typed errors, zero trait objects. macOS (AVFoundation), Windows (Media Foundation), Linux (V4L2), plus optional RTSP. Ships with first-class dioxus-cameras and egui-cameras integration crates."
+link = "https://github.com/matthewjberger/cameras"
+technologies = ["Rust", "AVFoundation", "Media Foundation", "V4L2", "RTSP"]
+
+[[items]]
+title = "charter 🦀"
+description = "Structural codebase intelligence for LLMs via MCP. Parses Rust and Python projects with tree-sitter, builds an in-memory index of symbols, call graphs, type hierarchies, and cross-references, then exposes it through structured JSON tools. Sub-millisecond query latency."
+link = "https://github.com/matthewjberger/charter"
+technologies = ["Rust", "MCP", "tree-sitter", "LLM"]
+
+[[items]]
+title = "egui-thematic 🦀"
+description = "A theme editor and configuration system for egui applications with full control over 73 visual properties, live preview window, 9 built-in presets (Dracula, Nord, Gruvbox, Solarized, Tokyo Night, etc.), random theme generation, JSON/Rust code export, and persistence."
+link = "https://github.com/matthewjberger/egui-thematic"
+technologies = ["Rust", "egui", "Theming"]
+
+[[items]]
 title = "enum2contract 🦀"
 description = "A no_std compatible Rust derive macro for defining pub/sub messaging contracts using strongly typed enums. Generates topic strings, payload structs, and supports JSON and binary formats."
 link = "https://github.com/matthewjberger/enum2contract"
@@ -41,12 +65,6 @@ title = "nightshade 🦀"
 description = "Data-oriented Rust game engine featuring a custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
 link = "https://github.com/matthewjberger/nightshade"
 technologies = ["Rust", "wgpu", "WebGPU", "Graphics"]
-
-[[items]]
-title = "nightshade-editor 🦀"
-description = "Visual editor for the nightshade game engine with scene editing and asset management capabilities."
-link = "https://github.com/matthewjberger/nightshade"
-technologies = ["Rust", "wgpu", "egui", "Graphics"]
 
 [[items]]
 title = "stateless 🦀"
