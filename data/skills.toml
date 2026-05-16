@@ -1,5 +1,6 @@
 title = "Skills"
 description = "Tools and domains I've shipped to production. Highlighted entries are the ones I lean on most."
+sort = "asc"
 
 top_items = [
     "Rust",
