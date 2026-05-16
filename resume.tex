@@ -81,7 +81,7 @@ Senior Staff Rust engineer with 10+ years writing Rust (including pre-1.0). Foun
 
 %==== Skills ====%
 \header{Skills}
-\textbf{Languages:} Rust, C++, C, TypeScript, Python\\
+\textbf{Languages:} Rust, C++, C, C\#, TypeScript, Python\\
 \textbf{Systems:} Embedded (RP2040, Embassy), real-time control, async (Tokio), IPC, message brokers, Yocto Linux, distributed systems\\
 \textbf{Web/UI:} Leptos, Dioxus, egui, WebAssembly, wgpu, Vulkan, OpenGL\\
 \textbf{Cloud/Infra:} AWS, Pulumi, Greengrass IoT, Docker, GitHub Actions
@@ -141,10 +141,11 @@ Senior Staff Rust engineer with 10+ years writing Rust (including pre-1.0). Foun
 \header{Open Source}
 \vspace{-1mm}
 \begin{itemize} \itemsep 1pt
+    \item \textbf{Nightshade}: data-oriented Rust game engine featuring a custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration; runs natively on DX12/Metal/Vulkan and in-browser via WebGPU (live demo: \textbf{matthewberger.dev/nightshade})
+    \item \textbf{freecs}: archetype-based ECS in Rust with zero unsafe code, Rayon-parallel system execution, sparse-set tags, deferred command buffers, and watermark change detection; the entire ECS is generated at compile time via a declarative macro
     \item \textbf{enum2 macro family} (enum2str, enum2contract, enum2egui, enum2pos, enum2repr): derive macros for enum-driven design patterns with \textbf{230k+ total downloads} on crates.io
-    \item \textbf{wgpu-example} (\textbf{98 stars}, 13 forks): minimal Rust + wgpu + egui template without eframe; runs on Windows, Linux, macOS, web, Android, and OpenXR (Quest 3)
-    \item \textbf{Nightshade}: cross-platform data-oriented game engine in Rust with custom ECS and render graph; runs on Windows, Linux, macOS, and web via WebAssembly
-    \item \textbf{freecs}: high-performance ECS library in 1,700 lines of Rust; multi-threaded with Rayon, zero unsafe code, foundation of Nightshade
+    \item \textbf{wgpu-example}: minimal Rust + wgpu + egui template showing how to build graphics that run everywhere; native desktop, WebGPU and WebGL via WebAssembly, Android, Steam Deck, and OpenXR VR with hand tracking
+    \item \textbf{cameras}: cross-platform Rust camera library with data-oriented design (explicit format negotiation, push-based frame delivery, zero trait objects); ships with Dioxus and egui integrations
     \item \textbf{bamboo}: fast Rust static site generator powering matthewberger.dev
 \end{itemize}
 
