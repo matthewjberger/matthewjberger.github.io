@@ -48,21 +48,16 @@ achievements = [
 ]
 
 [[jobs]]
-title = "Software Engineer"
+title = "Software Engineer (Intern through Full-Time)"
 company = "Hamilton Company"
-period = "Jan 2018 - Jul 2019"
+period = "Oct 2014 - Jul 2019"
 achievements = [
-    "Built safety-critical software for liquid-handling medical robots in a cross-disciplinary environment",
-    "Reduced calibration development from 2 months to 2 weeks through reusable plugin framework",
+    "Built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots",
+    "Reduced calibration development from 2 months to 2 weeks by consolidating multiple applications into a single GUI and reusable plugin framework",
+    "Created Windows VM bootstrapper that cut development environment setup from a day to a few clicks",
     "Developed calibration application driving Hamilton's firmware via UI for Illumina, Hamilton's largest OEM customer ($2M in machine purchases)",
-]
-
-[[jobs]]
-title = "Software Engineering Intern"
-company = "Hamilton Company"
-period = "Oct 2014 - Dec 2017"
-achievements = [
+    "Mentored new hires and interns on team processes and coding practices",
     "Automated gravimetric analysis QA process, saving 1+ week per robot across production fleet",
-    "Saved developers hours of time per day on common tasks by creating a suite of in-house tools",
-    "Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through collaboration with third-party device manufacturers",
+    "Saved developers hours per day on common tasks by creating a suite of in-house tools",
+    "Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through third-party device manufacturer collaboration",
 ]
