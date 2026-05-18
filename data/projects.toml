@@ -1,6 +1,6 @@
 [[items]]
 title = "nightshade 🦀"
-description = "Data-oriented Rust game engine featuring custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
+description = "Data-oriented Rust game engine featuring custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, scene graph, object picking, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
 link = "https://github.com/matthewjberger/nightshade"
 technologies = ["Rust", "wgpu", "ECS", "WebGPU"]
 

@@ -8,7 +8,7 @@ demo_label = "Read the Series"
 
 [[items]]
 title = "nightshade 🦀"
-description = "Data-oriented Rust game engine with custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, procedural terrain, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
+description = "Data-oriented Rust game engine with custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, scene graph, object picking, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU."
 link = "https://github.com/matthewjberger/nightshade"
 image = "/nightshade.png"
 demo_link = "https://matthewberger.dev/nightshade"
