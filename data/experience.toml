@@ -43,7 +43,9 @@ achievements = [
 title = "Software Engineer"
 company = "Scientific Games"
 period = "Jul 2019 - May 2020"
-achievements = []
+achievements = [
+    "Worked on game engine architecture in the GDK (Game Development Kit), Scientific Games' Unity-based engine powering many casino game titles",
+]
 
 [[jobs]]
 title = "Software Engineer"
