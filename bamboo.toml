@@ -1,6 +1,6 @@
 title = "Matthew Berger 🦀"
 base_url = "https://matthewberger.dev"
-description = "Senior Staff Rust engineer with 10+ years writing Rust, the last 5 years in production food assembly robotics at Hyphen."
+description = "Senior Staff Rust engineer with 5+ years of production Rust, writing Rust since 2016."
 author = "Matthew J. Berger"
 language = "en"
 link_check_ignore = ["/nightshade", "/articles"]
