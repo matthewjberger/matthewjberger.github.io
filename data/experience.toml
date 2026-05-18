@@ -43,9 +43,7 @@ achievements = [
 title = "Software Engineer"
 company = "Scientific Games"
 period = "Jul 2019 - May 2020"
-achievements = [
-    "Shipped performance and gameplay defect fixes in a Unity-based casino platform",
-]
+achievements = []
 
 [[jobs]]
 title = "Software Engineer"
