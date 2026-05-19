@@ -70,8 +70,8 @@ Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years i
 
 \jobentry{Hyphen (Culinary Robotics)}{Remote}{Founding Software Engineer (promoted Senior, Staff, Senior Staff)}{July 2021 -- May 2026}
 \begin{itemize}
-  \item Architected and built the food assembly robotics controls software, with 1,000+ pull requests merged across 4 years, spanning low-level motor control to cloud service orchestration
   \item Diagnosed scaling limitations in the legacy PLC system, led the technical pivot to embedded Rust, and pioneered RP2040 firmware with Embassy, creating the first Rust TMC5160 motor and AS5048A encoder drivers, proving Rust could meet real-time control loop requirements
+  \item Architected and built the food assembly robotics controls software, with 1,000+ pull requests merged across 4 years, spanning low-level motor control to cloud service orchestration
   \item Designed and built MBTT, an async pub/sub message broker over TCP with cross-host bridging, length-prefixed postcard framing, and compile-time topic contracts via procedural macros, coordinating every distributed process across the industrial PC and RP2040 boards
   \item Implemented a \texttt{no\_std} embedded MBTT client on Embassy with bounded static channels, integrating RP2040 firmware into the same pub/sub topology as the industrial PC
   \item Authored the controls suite as a multi-process system of state-machine-based servers corresponding to the robot equipment, communicating via typed command/event contracts over the broker, with coordinator servers orchestrating cross-subsystem behavior
