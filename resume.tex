@@ -26,7 +26,7 @@
 \titlespacing*{\section}{0pt}{8pt}{4pt}
 
 % List formatting: tight, no bullet indent waste
-\setlist[itemize]{leftmargin=*,topsep=1pt,itemsep=0pt,parsep=0pt}
+\setlist[itemize]{leftmargin=*,topsep=3pt,itemsep=2pt,parsep=0pt}
 
 % Job entry helper: title, dates, subtitle
 \newcommand{\jobentry}[4]{%
@@ -79,7 +79,7 @@ Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years i
   \item Shipped Hyphen Studio, a Dioxus desktop application enabling operators to configure makeline layouts and parameters directly
   \item Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite
   \item Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100\% adoption across all Hyphen engineers
-  \item Mentored 6 web developers into productive Rust contributors within 2 months each, enabling parallel horizontal platform expansion over the following year
+  \item Mentored 6 engineers new to Rust into productive contributors within 2 months each, enabling parallel horizontal platform expansion over the following year
 \end{itemize}
 
 \jobentry{Sierra Nevada Corporation}{Englewood, CO}{Software Engineer III}{May 2020 -- July 2021}
@@ -99,6 +99,7 @@ Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years i
   \item Built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots
   \item Reduced calibration development from 2 months to 2 weeks by consolidating multiple applications into a single GUI and reusable plugin framework
   \item Developed the calibration application that a major customer, Illumina (\$2M in machine purchases), used to drive Hamilton's robot firmware
+  \item Built software adapters bridging SiLA-compliant and non-SiLA lab instruments, expanding Hamilton's interop reach across third-party device manufacturers and driving instrument sales
 \end{itemize}
 
 % ------------------------------------------------------------
@@ -110,9 +111,18 @@ Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years i
   \item \textbf{Nightshade}: data-oriented Rust game engine (200k+ LOC) featuring a custom render graph with sub-graph composition and resource aliasing for transient memory reuse, built-in editor, rapier3d physics, kira audio, gltf asset loading, scene graph, object picking, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU (live demo: \href{https://matthewberger.dev/nightshade}{matthewberger.dev/nightshade})
   \item \textbf{freecs} (48k+ downloads on crates.io): archetype-based ECS in Rust with zero unsafe code, Rayon-parallel system execution, sparse-set tags, deferred command buffers, and watermark change detection. The entire ECS is generated at compile time via a declarative macro. Design documented in a 3-part series at \href{https://matthewberger.dev/articles}{matthewberger.dev/articles}
   \item \textbf{enum2 macro family} (enum2str, enum2contract, enum2egui, enum2pos, enum2repr): derive macros for enum-driven design patterns with 230k+ total downloads on crates.io
-  \item \textbf{wgpu-example}: minimal Rust + wgpu + egui template showing how to build graphics that run everywhere, including native desktop, WebGPU and WebGL via WebAssembly, Android, Steam Deck, and OpenXR VR with hand tracking
-  \item \textbf{cameras} (new in 2026): cross-platform Rust library for real-time video frame pipelines across Linux, macOS, and Windows, with data-oriented design (explicit format negotiation, push-based frame delivery, zero trait objects). Ships with Dioxus and egui integrations.
-  \item \textbf{scoop-nerd-fonts}: maintainer of the canonical scoop bucket providing one-command font installation on Windows for Nerd Fonts and other open fonts (440+ stars, 4,400+ commits)
+  \item \textbf{bamboo-ssg}: fast Rust static site generator with markdown + Tera templates, syntect-highlighted code blocks, live-reload dev server with incremental builds, RSS/Atom/sitemap, and responsive images. Powers matthewberger.dev
+  \item \textbf{cameras}: cross-platform Rust library for real-time video frame pipelines across Linux, macOS, and Windows, with data-oriented design (explicit format negotiation, push-based frame delivery, zero trait objects). Ships with Dioxus and egui integrations.
+  \item \textbf{scoop-nerd-fonts}: maintainer of the canonical scoop bucket providing one-command font installation on Windows for Nerd Fonts and other open fonts (440+ stars)
+\end{itemize}
+
+% ------------------------------------------------------------
+% Writing
+% ------------------------------------------------------------
+\section*{Writing}
+
+\begin{itemize}
+  \item \textbf{Build your own ECS} (3-part series at \href{https://matthewberger.dev/articles}{matthewberger.dev/articles}): builds the freecs kernel from scratch, covering archetype storage, structural change and queries, change detection, events, tags, and command buffers
 \end{itemize}
 
 % ------------------------------------------------------------

@@ -12,7 +12,7 @@ achievements = [
     "Shipped Hyphen Studio, a Dioxus desktop application enabling operators to configure makeline layouts and parameters directly",
     "Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite",
     "Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100% adoption across all Hyphen engineers",
-    "Mentored 6 web developers into productive Rust contributors within 2 months each, enabling parallel horizontal platform expansion over the following year",
+    "Mentored 6 engineers new to Rust into productive contributors within 2 months each, enabling parallel horizontal platform expansion over the following year",
 ]
 
 [[jobs]]
@@ -41,4 +41,5 @@ achievements = [
     "Built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots",
     "Reduced calibration development from 2 months to 2 weeks by consolidating multiple applications into a single GUI and reusable plugin framework",
     "Developed the calibration application that a major customer, Illumina ($2M in machine purchases), used to drive Hamilton's robot firmware",
+    "Built software adapters bridging SiLA-compliant and non-SiLA lab instruments, expanding Hamilton's interop reach across third-party device manufacturers and driving instrument sales",
 ]
