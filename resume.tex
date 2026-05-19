@@ -75,7 +75,7 @@ Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years i
   \item Designed and built MBTT, an async pub/sub message broker over TCP with cross-host bridging, length-prefixed postcard framing, and compile-time topic contracts via procedural macros, coordinating every distributed process across the industrial PC and RP2040 boards
   \item Implemented a \texttt{no\_std} embedded MBTT client on Embassy with bounded static channels, integrating RP2040 firmware into the same pub/sub topology as the industrial PC
   \item Authored the controls suite as a multi-process system of state-machine-based servers corresponding to the robot equipment, communicating via typed command/event contracts over the broker, with coordinator servers orchestrating cross-subsystem behavior
-  \item Built a custom Yocto Linux distribution and AWS Greengrass-managed OTA pipeline delivering firmware and software updates to the production makeline fleet
+  \item Built a custom Yocto Linux distribution and AWS Greengrass-managed OTA pipeline delivering firmware and software updates to makelines
   \item Shipped Hyphen Studio, a customer-facing Dioxus desktop application enabling operators to configure makeline layouts and parameters
   \item Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite
   \item Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100\% adoption among Hyphen engineers
