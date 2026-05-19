@@ -3,16 +3,16 @@ title = "Founding Software Engineer (Senior → Staff → Senior Staff)"
 company = "Hyphen Robotics"
 period = "Jul 2021 - May 2026"
 achievements = [
-    "Architected and built the food assembly robotics controls software, with 1,000+ pull requests merged across 4 years, from getting the first motor moving to orchestrating cloud services",
     "Diagnosed scaling limitations in the legacy PLC system, led the technical pivot to embedded Rust, and pioneered RP2040 firmware with Embassy-rs, creating the first Rust TMC5160 motor and AS5048A encoder drivers proving Rust could meet real-time control loop requirements",
+    "Architected and built the food assembly robotics controls software, with 1,000+ pull requests merged across 4 years, from getting the first motor moving to orchestrating cloud services",
     "Designed and built MBTT (Matt Berger Telemetry Transport), the async pub/sub message broker over TCP with cross-host bridging, length-prefixed postcard framing, and compile-time topic contracts via procedural macros, coordinating every distributed process across the industrial PC and RP2040 boards at sub-millisecond local latency across 4+ years of continuous fleet operation",
     "Implemented a no_std embedded MBTT client on Embassy with bounded static channels, integrating RP2040 firmware into the same pub/sub topology as the industrial PC",
     "Authored the controls suite as a multi-process system of state-machine-based servers corresponding to the robot equipment, communicating via typed command/event contracts over the broker, with coordinator servers orchestrating cross-subsystem behavior",
-    "Built a custom Yocto Linux distribution and AWS Greengrass-managed OTA pipeline delivering firmware and software updates to makelines",
     "Shipped Hyphen Studio, a Dioxus desktop application enabling operators to configure makeline layouts and parameters directly",
-    "Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite",
     "Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100% adoption across all Hyphen engineers",
+    "Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite",
     "Mentored 6 engineers new to Rust into productive contributors within 2 months each, enabling parallel horizontal platform expansion over the following year",
+    "Built a custom Yocto Linux distribution and AWS Greengrass-managed OTA pipeline delivering firmware and software updates to makelines",
 ]
 
 [[jobs]]

@@ -29,18 +29,18 @@ just build   # one-shot build to dist/
 │   ├── education.toml
 │   ├── highlights.toml
 │   └── crates.toml
-└── static/                 # Copied verbatim to the output root (Resume.pdf, images, CNAME, favicon)
+└── static/                 # Copied verbatim to the output root (Berger_Matthew_Resume.pdf, images, CNAME, favicon)
 ```
 
 All content lives in `content/` and `data/`. The layout, interactivity, and styling come from bamboo's built-in `portfolio.html` template.
 
 ## Resume
 
-`resume.tex` is the source for `static/Resume.pdf`. Rebuild it with `pdflatex`:
+`resume.tex` is the source for `static/Berger_Matthew_Resume.pdf`. Rebuild it with `pdflatex`:
 
 ```sh
 pdflatex resume.tex
-mv resume.pdf static/Resume.pdf
+mv resume.pdf static/Berger_Matthew_Resume.pdf
 ```
 
 Install `pdflatex` via:
