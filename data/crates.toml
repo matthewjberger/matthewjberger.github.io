@@ -8,7 +8,7 @@ technologies = ["Rust", "Static Site", "Tera", "syntect"]
 
 [[items]]
 title = "cameras 🦀"
-description = "A cross-platform camera library for Rust with data-oriented design: explicit format negotiation, push-based frame delivery, typed errors, zero trait objects. macOS (AVFoundation), Windows (Media Foundation), Linux (V4L2), plus optional RTSP. Ships with first-class dioxus-cameras and egui-cameras integration crates."
+description = "A cross-platform camera library for Rust with data-oriented design: explicit format negotiation, push-based frame delivery, typed errors, zero trait objects. macOS (AVFoundation), Windows (Media Foundation), Linux (V4L2), plus optional RTSP. Ships with dioxus-cameras and egui-cameras integration crates."
 link = "https://github.com/matthewjberger/cameras"
 technologies = ["Rust", "AVFoundation", "Media Foundation", "V4L2", "RTSP"]
 
@@ -20,7 +20,7 @@ technologies = ["Rust", "MCP", "tree-sitter", "LLM"]
 
 [[items]]
 title = "dhcplease 🦀"
-description = "A cross-platform DHCP server library and CLI. Full protocol implementation (DISCOVER/OFFER/REQUEST/ACK/NAK/RELEASE/DECLINE/INFORM), Option 61 client identifiers, Option 82 relay-agent echo, static MAC→IP bindings, persisted leases, concurrent packet handling with rate limiting. Async Tokio. Runs natively on Windows, including interface binding — a rarity for open-source DHCP servers."
+description = "A cross-platform DHCP server library and CLI with full protocol implementation (all 8 DHCP message types), Option 61 client identifiers, Option 82 relay-agent echo, static MAC-to-IP bindings, persisted leases, concurrent packet handling with rate limiting. Async Tokio. Runs natively on Windows, including interface binding (rare for open-source DHCP servers)."
 link = "https://github.com/matthewjberger/dhcplease"
 technologies = ["Rust", "Tokio", "DHCP", "Networking"]
 
@@ -74,12 +74,12 @@ technologies = ["Rust", "wgpu", "WebGPU", "Graphics"]
 
 [[items]]
 title = "stateless 🦀"
-description = "A lightweight, zero-cost state machine library that separates structure from behavior. Guards and actions live in wrapper code, not the DSL, enabling zero coupling and complete flexibility."
+description = "A zero-cost state machine library that separates structure from behavior. Guards and actions live in wrapper code, not the DSL."
 link = "https://github.com/matthewjberger/stateless"
 technologies = ["Rust", "Macros", "State Machine", "no_std"]
 
 [[items]]
 title = "taps 🦀"
-description = "A Tokio async pub/sub message broker for in-process communication. Enables decoupled component communication with topic-based routing and scalable async architecture."
+description = "A Tokio async pub/sub message broker for in-process messaging between async tasks. Topic-based routing."
 link = "https://github.com/matthewjberger/taps"
 technologies = ["Rust", "Tokio", "Async", "Pub/Sub"]

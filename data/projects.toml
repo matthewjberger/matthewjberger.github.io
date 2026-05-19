@@ -84,6 +84,6 @@ technologies = ["C++", "Ogre3D", "CMake"]
 
 [[items]]
 title = "scoop-nerd-fonts"
-description = "PowerShell bucket for installing nerd fonts on Windows. Actively maintained with community engagement."
+description = "One-command font installation for Windows. Maintainer of the canonical scoop bucket for Nerd Fonts and other open fonts. 440+ stars, 4,400+ commits. Install via `scoop install <name>`."
 link = "https://github.com/matthewjberger/scoop-nerd-fonts"
 technologies = ["PowerShell", "Scoop", "Fonts"]

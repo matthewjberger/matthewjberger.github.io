@@ -9,6 +9,7 @@
 \usepackage{titlesec}
 \usepackage{xcolor}
 \usepackage{parskip}
+\usepackage{needspace}
 
 % ============================================================
 % Formatting
@@ -29,10 +30,12 @@
 
 % Job entry helper: title, dates, subtitle
 \newcommand{\jobentry}[4]{%
+  \needspace{5\baselineskip}%
   \vspace{4pt}%
   \textbf{#1} \hfill #2 \\
   \textit{#3} \hfill \textit{#4}%
   \vspace{-4pt}%
+  \nopagebreak[4]%
 }
 
 % ============================================================
@@ -58,34 +61,25 @@
 % ------------------------------------------------------------
 % Summary
 % ------------------------------------------------------------
-Senior Staff Rust Software Engineer with 10 years of Rust experience, the last 5 years in production robotics. Founding software engineer at Hyphen, where I built a food assembly robotics controls suite from zero to production, including a real-time async pub/sub message broker over TCP with cross-host bridging running at sub-millisecond local latency with zero message loss across 3+ years of continuous fleet operation. Background spans embedded firmware to cloud, with prior experience in aerospace imaging (Sierra Nevada) and safety-critical medical robotics (Hamilton). Author of Rust crates (freecs, enum2 family) with 280k+ combined crates.io downloads.
+Senior Staff Rust Software Engineer working with Rust since 2016, with 5 years in production robotics. Founding software engineer at Hyphen, where in the first 22 months I built the food assembly robotics platform from first commit to a full controls suite, underpinning \$35M+ in combined investment from Chipotle and Cava. The platform runs on a real-time async pub/sub message broker with sub-millisecond latency and zero message loss across 4+ years of fleet operation. Open source: 280k+ crates.io downloads (freecs, enum2 family) and the Nightshade game engine (live demo at matthewberger.dev/nightshade).
 
 % ------------------------------------------------------------
 % Experience
 % ------------------------------------------------------------
 \section*{Work Experience}
 
-\jobentry{Hyphen (Culinary Robotics)}{Remote}{Senior Staff Software Engineer (Founding Engineer)}{January 2026 -- May 2026}
+\jobentry{Hyphen (Culinary Robotics)}{Remote}{Founding Software Engineer (Senior $\rightarrow$ Staff $\rightarrow$ Senior Staff)}{July 2021 -- May 2026}
 \begin{itemize}
-  \item Sole architect of the production food assembly robotics controls suite, with 1,000+ pull requests merged across firmware, controls, IPC, motion, and cloud
+  \item Architected and built the food assembly robotics controls software, with 1,000+ pull requests merged across 4 years, from getting the first motor moving to orchestrating cloud services
+  \item Diagnosed scaling limitations in the legacy PLC system, led the technical pivot to embedded Rust, and pioneered RP2040 firmware with Embassy-rs, creating the first Rust TMC5160 motor and AS5048A encoder drivers proving Rust could meet real-time control loop requirements
+  \item Designed and built the async pub/sub message broker over TCP with cross-host bridging, length-prefixed postcard framing, and compile-time topic contracts via procedural macros, coordinating every distributed process across the industrial PC and RP2040 boards at sub-millisecond local latency and zero message loss across 4+ years of continuous fleet operation
+  \item Implemented a \texttt{no\_std} embedded broker client on Embassy with bounded static channels, integrating RP2040 firmware into the same pub/sub topology as the industrial PC
+  \item Authored the controls suite as a multi-process system of state-machine-based servers corresponding to the robot equipment, communicating via typed command/event contracts over the broker, with coordinator servers orchestrating cross-subsystem behavior
+  \item Built a custom Yocto Linux distribution and AWS Greengrass-managed OTA pipeline delivering firmware and software updates to the production makeline fleet
   \item Shipped Hyphen Studio, a Dioxus desktop application enabling operators to configure makeline layouts and parameters directly
-  \item Replaced TypeScript/GraphQL tablet portal with a pure Rust Leptos rewrite connecting directly to the IPC broker, eliminating an entire backend tier
-\end{itemize}
-
-\jobentry{Hyphen (Culinary Robotics)}{Remote}{Staff Software Engineer (Founding Engineer)}{September 2022 -- January 2026}
-\begin{itemize}
-  \item Designed and built the production async pub/sub message broker over TCP with cross-host bridging, coordinating every distributed process across the industrial PC and embedded boards, at sub-millisecond local latency and zero message loss across 3+ years of continuous fleet operation
-  \item Built multi-axis motion control with trajectory planning, kinematics, and motor drivers with closed-loop PID for MG4010 and LKMG actuators
-  \item Built the full stack from bare-metal firmware (RP2040/Embassy) to distributed robotics control system, custom Yocto Linux distribution, and AWS cloud
+  \item Rewrote the TypeScript/GraphQL tablet portal in pure Rust with Leptos, connecting over WebSockets to a forwarding server that bridges broker topics out to web clients, enabling direct import of the same Rust contract types used across the controls suite
   \item Built Hyphen Explorer (Bevy + egui) for real-time IPC visualization, debugging, and system control, achieving 100\% adoption across all Hyphen engineers
-  \item Mentored team of web developers into Rust systems programmers through architectural review, pair programming, and documented patterns
-\end{itemize}
-
-\jobentry{Hyphen (Culinary Robotics)}{Remote}{Senior Software Engineer (Founding Engineer)}{July 2021 -- September 2022}
-\begin{itemize}
-  \item Diagnosed scaling limitations in legacy PLC system preventing growth beyond prototype
-  \item Led technical pivot from costly PLC-based control system to embedded Rust architecture
-  \item Pioneered RP2040 firmware with Embassy-rs, creating first Rust TMC5160 motor and AS5048A encoder drivers proving Rust could meet real-time control loop requirements
+  \item Mentored 6 web developers into productive Rust contributors within 2 months each, enabling parallel horizontal platform expansion over the following year
 \end{itemize}
 
 \jobentry{Sierra Nevada Corporation}{Englewood, CO}{Software Engineer III}{May 2020 -- July 2021}
@@ -96,31 +90,16 @@ Senior Staff Rust Software Engineer with 10 years of Rust experience, the last 5
 
 \jobentry{Scientific Games}{Reno, NV}{Software Engineer}{July 2019 -- May 2020}
 \begin{itemize}
-  \item Worked on game engine architecture in the GDK (Game Development Kit), Scientific Games' Unity-based engine powering many casino game titles
+  \item Contributed to the GDK, Scientific Games' Unity-based engine powering casino game titles across their portfolio
+  \item Migrated multiple shipped casino game titles from Unity's legacy GUI text system to TextMeshPro, modernizing typography rendering across the GDK portfolio
 \end{itemize}
 
 \jobentry{Hamilton Company}{Reno, NV}{Software Engineer (Intern through Full-Time)}{October 2014 -- July 2019}
 \begin{itemize}
   \item Built safety-critical software in a cross-disciplinary environment that calibrates and operates liquid-handling medical robots
   \item Reduced calibration development from 2 months to 2 weeks by consolidating multiple applications into a single GUI and reusable plugin framework
-  \item Created Windows VM bootstrapper that cut development environment setup from a day to a few clicks
-  \item Developed calibration application driving Hamilton's firmware via UI for Illumina, Hamilton's largest OEM customer (\$2M in machine purchases)
-  \item Mentored new hires and interns on team processes and coding practices
-  \item Automated gravimetric analysis QA process, saving 1+ week per robot across production fleet
-  \item Saved developers hours per day on common tasks by creating a suite of in-house tools
-  \item Improved instrument sales by creating software adapters for both SiLA and non-SiLA compliant devices through third-party device manufacturer collaboration
+  \item Developed the calibration application that a major customer, Illumina (\$2M in machine purchases), used to drive Hamilton's robot firmware
 \end{itemize}
-
-% ------------------------------------------------------------
-% Skills
-% ------------------------------------------------------------
-\section*{Skills}
-
-\textbf{Languages:} Rust, C++, C, C\#, TypeScript, Python \\
-\textbf{Systems:} Real-time low-latency systems, embedded (RP2040, Embassy), async Rust (Tokio, async-std), IPC, message brokers, networking, Yocto Linux, distributed systems \\
-\textbf{Cross-Platform:} Linux, macOS, Windows, Android, WebAssembly, Steam Deck, OpenXR/VR \\
-\textbf{UI/Graphics:} Leptos, Dioxus, egui, Bevy, wgpu, Vulkan, DX12, Metal, OpenGL \\
-\textbf{Cloud/Infra:} AWS, Pulumi, Greengrass IoT, Docker, GitHub Actions
 
 % ------------------------------------------------------------
 % Open Source
@@ -128,12 +107,25 @@ Senior Staff Rust Software Engineer with 10 years of Rust experience, the last 5
 \section*{Open Source}
 
 \begin{itemize}
-  \item \textbf{Nightshade}: 200k+ line data-oriented Rust game engine featuring a custom render graph, built-in editor, rapier3d physics, kira audio, gltf asset loading, scene graph, object picking, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU (live demo: \href{https://matthewberger.dev/nightshade}{matthewberger.dev/nightshade})
+  \item \textbf{Nightshade}: data-oriented Rust game engine (200k+ LOC) featuring a custom render graph with sub-graph composition and resource aliasing for transient memory reuse, built-in editor, rapier3d physics, kira audio, gltf asset loading, scene graph, object picking, and Steam integration. Runs natively on DX12/Metal/Vulkan and in-browser via WebGPU (live demo: \href{https://matthewberger.dev/nightshade}{matthewberger.dev/nightshade})
   \item \textbf{freecs} (48k+ downloads on crates.io): archetype-based ECS in Rust with zero unsafe code, Rayon-parallel system execution, sparse-set tags, deferred command buffers, and watermark change detection. The entire ECS is generated at compile time via a declarative macro. Design documented in a 3-part series at \href{https://matthewberger.dev/articles}{matthewberger.dev/articles}
   \item \textbf{enum2 macro family} (enum2str, enum2contract, enum2egui, enum2pos, enum2repr): derive macros for enum-driven design patterns with 230k+ total downloads on crates.io
   \item \textbf{wgpu-example}: minimal Rust + wgpu + egui template showing how to build graphics that run everywhere, including native desktop, WebGPU and WebGL via WebAssembly, Android, Steam Deck, and OpenXR VR with hand tracking
   \item \textbf{cameras} (new in 2026): cross-platform Rust library for real-time video frame pipelines across Linux, macOS, and Windows, with data-oriented design (explicit format negotiation, push-based frame delivery, zero trait objects). Ships with Dioxus and egui integrations.
+  \item \textbf{scoop-nerd-fonts}: maintainer of the canonical scoop bucket providing one-command font installation on Windows for Nerd Fonts and other open fonts (440+ stars, 4,400+ commits)
 \end{itemize}
+
+% ------------------------------------------------------------
+% Skills
+% ------------------------------------------------------------
+\section*{Skills}
+
+\textbf{Languages:} Rust, C\#, C++, TypeScript, Python \\
+\textbf{Embedded \& Real-time:} RP2040, Embassy, \texttt{no\_std}, real-time, low-latency systems, async Rust (Tokio), procedural macros, Yocto Linux \\
+\textbf{Distributed Systems:} message brokers, HTTP/WebSocket, postcard, tracing/observability \\
+\textbf{Cross-Platform:} Linux, macOS, Windows, Android, WebAssembly, Steam Deck, OpenXR/VR \\
+\textbf{UI/Graphics:} Leptos, Dioxus, egui, Bevy, wgpu, Vulkan, DX12, Metal, OpenGL, PBR rendering \\
+\textbf{Cloud/Infra:} AWS, Pulumi, Greengrass IoT, Docker, GitHub Actions
 
 % ------------------------------------------------------------
 % Education

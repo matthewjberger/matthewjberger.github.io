@@ -1,5 +1,5 @@
 title = "Skills"
-description = "Tools and domains I've shipped to production. Highlighted entries are the ones I lean on most."
+description = "Tools and domains I've shipped to production."
 sort = "asc"
 
 top_items = [
@@ -11,9 +11,8 @@ top_items = [
 ]
 
 items = [
-    "C++",
-    "C",
     "C#",
+    "C++",
     "TypeScript",
     "Python",
     "RP2040",
