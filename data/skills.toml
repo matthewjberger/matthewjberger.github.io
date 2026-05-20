@@ -11,6 +11,7 @@ top_items = [
 ]
 
 items = [
+    "Go",
     "C#",
     "C++",
     "TypeScript",
