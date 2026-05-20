@@ -1,5 +1,15 @@
 # Portfolio
 
+Working with Rust since 2016, with 5 years in production robotics at Hyphen Robotics and earlier production Rust at Sierra Nevada Corporation (aerospace imaging). Background also includes safety-critical medical robotics at Hamilton Company.
+
+## Links
+
+- [matthewberger.dev](https://matthewberger.dev) portfolio site
+- [LinkedIn](https://www.linkedin.com/in/matthewjberger/)
+- [Resume (PDF)](static/Berger_Matthew_Resume.pdf)
+
+## About
+
 Personal portfolio site at [matthewberger.dev](https://matthewberger.dev), built with [bamboo](https://github.com/matthewjberger/bamboo), a static site generator written in Rust.
 
 ## Prerequisites
